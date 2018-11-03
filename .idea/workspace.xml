@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04cf11ec-61ca-41c1-a964-2916313cd599" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/DESCRIPTION.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/Flask-0.12.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/json.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/lib/python3.7/site-packages/flask/wrappers.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,14 +33,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2456" />
+          <entry key="py" value="2980" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="2456" />
+          <entry key="Python" value="2980" />
         </counts>
       </usages-collector>
     </session>
@@ -79,16 +62,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+            <state relative-caret-position="673">
+              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <marker date="1541240970862" expanded="true" signature="349:354" ph="..." />
-                <marker date="1541240970862" expanded="true" signature="730:731" ph="..." />
-                <marker date="1541240970862" expanded="true" signature="730:951" ph="..." />
-                <marker date="1541240970862" expanded="true" signature="730:1001" ph="..." />
-                <marker date="1541240970862" expanded="true" signature="1024:1029" ph="..." />
-                <marker date="1541240970862" expanded="true" signature="1511:1516" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="352:412" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="517:522" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="908:1086" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="1156:1157" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="1156:1428" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="1156:1478" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="1501:1506" ph="..." />
+                <marker date="1541270469726" expanded="true" signature="1988:1993" ph="..." />
               </folding>
             </state>
           </provider>
@@ -305,16 +290,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        <state relative-caret-position="673">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1541240970862" expanded="true" signature="349:354" ph="..." />
-            <marker date="1541240970862" expanded="true" signature="730:731" ph="..." />
-            <marker date="1541240970862" expanded="true" signature="730:951" ph="..." />
-            <marker date="1541240970862" expanded="true" signature="730:1001" ph="..." />
-            <marker date="1541240970862" expanded="true" signature="1024:1029" ph="..." />
-            <marker date="1541240970862" expanded="true" signature="1511:1516" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="352:412" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="517:522" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="908:1086" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="1156:1157" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="1156:1428" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="1156:1478" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="1501:1506" ph="..." />
+            <marker date="1541270469726" expanded="true" signature="1988:1993" ph="..." />
           </folding>
         </state>
       </provider>

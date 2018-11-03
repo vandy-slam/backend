@@ -10,8 +10,16 @@ app = Flask(__name__)
 
 user_SLAM_map_dict = {}
 
+
+@app.route('/map/names', methods=['GET'])
+def get_map_names():
+    map_names = {1: 'test'}
+    return jsonify(map_names)
+
 @app.route('/map', methods=['GET'])
 def get_2d_map_coords():
+    map_name = request.args.get('map_name')
+
     stub_data = {
         0: {
             'x': 0,
@@ -33,6 +41,15 @@ def get_2d_map_coords():
 
     return jsonify(stub_data)
 
+
+@app.route('/map/save/destination', methods=['POST'])
+def add_map_destination():
+    x = request.form.get('x')
+    y = request.form.get('y')
+    map_name = request.form.get('map_name')
+    target_name = request.form.get('destination_name')
+
+    return "OK"
 
 @app.route('/directions/step', methods=['POST'])
 def get_directions():
@@ -64,6 +81,7 @@ def begin_directions():
 @app.route('/directions/end', methods=['POST'])
 def end_directions():
     # Destroy C++ object here
+    del user_SLAM_map_dict[request.form.get('user')]
     return OK_RESPONSE
 
 

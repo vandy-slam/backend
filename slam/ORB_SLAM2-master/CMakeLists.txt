@@ -85,7 +85,6 @@ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 )
 
 # Build examples
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
 
 PYTHON_ADD_MODULE(slam_map slam_map.cpp)
 FILE(COPY slam_map.py DESTINATION .)

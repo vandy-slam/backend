@@ -55,7 +55,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="592" />
+          <entry key="cpp" value="606" />
           <entry key="sh" value="20" />
           <entry key="txt" value="87" />
         </counts>
@@ -64,7 +64,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="87" />
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="591" />
+          <entry key="ObjectiveC" value="605" />
           <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
@@ -75,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slam_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+            <state relative-caret-position="407">
+              <caret line="114" column="37" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
               <folding>
                 <element signature="e#87#104#0" expanded="true" />
               </folding>
@@ -275,12 +275,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
-      <workItem from="1541275102817" duration="2503000" />
+      <workItem from="1541275102817" duration="2565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2518000" />
+    <option name="totallyTimeSpent" value="2580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="298" y="27" width="977" height="967" extended-state="0" />
@@ -318,7 +318,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/slam_map.cpp</url>
-          <line>114</line>
+          <line>115</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -364,8 +364,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/slam_map.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="79" column="53" selection-start-line="79" selection-start-column="53" selection-end-line="79" selection-end-column="53" />
+        <state relative-caret-position="407">
+          <caret line="114" column="37" selection-start-line="114" selection-start-column="37" selection-end-line="114" selection-end-column="37" />
           <folding>
             <element signature="e#87#104#0" expanded="true" />
           </folding>

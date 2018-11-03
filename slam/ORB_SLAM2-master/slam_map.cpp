@@ -112,6 +112,7 @@ using namespace boost::python;
 BOOST_PYTHON_MODULE(slam_map)
         {
                 class_<SLAMMap>("slam_map", init<string>())
+                        .def(init<>())
                         .def("test", &SLAMMap::test)
                 ;
 

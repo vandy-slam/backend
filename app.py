@@ -13,7 +13,7 @@ user_SLAM_map_dict = {}
 
 @app.route('/map/names', methods=['GET'])
 def get_map_names():
-    map_names = {1: 'test'}
+    map_names = {0: 'test'}
     return jsonify(map_names)
 
 @app.route('/map', methods=['GET'])
@@ -49,7 +49,7 @@ def add_map_destination():
     map_name = request.form.get('map_name')
     target_name = request.form.get('destination_name')
 
-    return "OK"
+    return OK_RESPONSE
 
 @app.route('/directions/step', methods=['POST'])
 def get_directions():

@@ -48,14 +48,14 @@ struct SLAMMap
         for(int ni=0; ni<nImages; ni++)
         {
             // Read image from file
-            im = cv::imread(string(argv[3])+"/"+vstrImageFilenames[ni],CV_LOAD_IMAGE_UNCHANGED);
+            im = cv::imread(arg3+"/"+vstrImageFilenames[ni],CV_LOAD_IMAGE_UNCHANGED);
             double tframe = vTimestamps[ni];
 
             if(im.empty())
             {
                 cerr << endl << "Failed to load image at: "
-                     << string(argv[3]) << "/" << vstrImageFilenames[ni] << endl;
-                return 1;
+                     << string(arg3) << "/" << vstrImageFilenames[ni] << endl;
+                return;
             }
 
 #ifdef COMPILEDWITHC11
@@ -105,6 +105,35 @@ struct SLAMMap
     string test() {return TEST;}
 
     ORB_SLAM2::System* SLAM;
+
+    void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vector<double> &vTimestamps)
+    {
+        ifstream f;
+        f.open(strFile.c_str());
+
+        // skip first three lines
+        string s0;
+        getline(f,s0);
+        getline(f,s0);
+        getline(f,s0);
+
+        while(!f.eof())
+        {
+            string s;
+            getline(f,s);
+            if(!s.empty())
+            {
+                stringstream ss;
+                ss << s;
+                double t;
+                string sRGB;
+                ss >> t;
+                vTimestamps.push_back(t);
+                ss >> sRGB;
+                vstrImageFilenames.push_back(sRGB);
+            }
+        }
+    }
 };
 
 #include <boost/python.hpp>

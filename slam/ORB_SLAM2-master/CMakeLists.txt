@@ -49,6 +49,7 @@ ${Pangolin_INCLUDE_DIRS}
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
 add_library(${PROJECT_NAME} SHARED
+slam_map.cpp
 src/System.cc
 src/Tracking.cc
 src/LocalMapping.cc
@@ -83,8 +84,6 @@ include_directories( ${PYTHON_INCLUDE_DIRS} )
 find_package( Boost COMPONENTS python REQUIRED )
 include_directories( ${Boost_INCLUDE_DIR} )
 
-# Build our library
-add_library(${PROJECT_NAME} SHARED slam_map.cpp )
 # don't prepend wrapper library name with lib
 set_target_properties( slam_map PROPERTIES PREFIX "" )
 

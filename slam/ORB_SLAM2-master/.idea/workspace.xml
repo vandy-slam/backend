@@ -57,12 +57,12 @@
         <counts>
           <entry key="cpp" value="606" />
           <entry key="sh" value="20" />
-          <entry key="txt" value="127" />
+          <entry key="txt" value="133" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CMakeLists.txt" value="127" />
+          <entry key="CMakeLists.txt" value="133" />
           <entry key="Doxygen file" value="1" />
           <entry key="ObjectiveC" value="605" />
           <entry key="PLAIN_TEXT" value="20" />
@@ -111,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            <state relative-caret-position="134">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -275,12 +275,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
-      <workItem from="1541275102817" duration="2716000" />
+      <workItem from="1541275102817" duration="2763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2731000" />
+    <option name="totallyTimeSpent" value="2778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="298" y="27" width="977" height="967" extended-state="0" />
@@ -367,8 +367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        <state relative-caret-position="134">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>

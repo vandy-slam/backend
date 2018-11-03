@@ -99,7 +99,7 @@ struct SLAMMap
         if (map_name == TEST) {
             arg1 = "./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt";
             arg2 = "./Examples/Monocular/TUM1.yaml";
-            arg3 = "./rgbd_dataset_freiburg1_xyz.tgz";
+            arg3 = "./rgbd_dataset_freiburg1_xyz";
         } else {
 
         }

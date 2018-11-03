@@ -1,12 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 project(ORB_SLAM2)
 
-FIND_PACKAGE(PythonInterp)
-FIND_PACKAGE(PythonLibs)
-FIND_PACKAGE(Boost COMPONENTS python)
-
-INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
-
 IF(NOT CMAKE_BUILD_TYPE)
   SET(CMAKE_BUILD_TYPE Release)
 ENDIF()
@@ -86,6 +80,20 @@ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 
 # Build examples
 
-PYTHON_ADD_MODULE(slam_map slam_map.cpp)
-# FILE(COPY slam_map.py DESTINATION .)
+if(APPLE)
+   set(CMAKE_SHARED_LIBRARY_SUFFIX ".so")
+endif(APPLE)
 
+# Find necessary packages
+find_package( PythonLibs 2.7 REQUIRED )
+include_directories( ${PYTHON_INCLUDE_DIRS} )
+
+find_package( Boost COMPONENTS python REQUIRED )
+include_directories( ${Boost_INCLUDE_DIR} )
+
+# Build our library
+add_library( slam_map SHARED slam_map.cpp )
+
+target_link_libraries( slam_map.cpp ${Boost_LIBRARIES} ${PYTHON_LIBRARIES} slam_map )
+# don't prepend wrapper library name with lib
+set_target_properties( slam_map PROPERTIES PREFIX "" )

@@ -22,7 +22,7 @@ struct SLAMMap
         init(TEST);
     }
     SLAMMap() {
-        this(TEST);
+        SLAMMap(TEST);
     }
 
     void init(std::string map_name) {

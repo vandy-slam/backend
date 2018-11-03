@@ -30,6 +30,8 @@ struct SLAMMap
 
         get_args(map_name, arg1, arg2, arg3);
 
+        cout << arg1 << " set\n";
+
         SLAM = new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
 
         vector<string> vstrImageFilenames;

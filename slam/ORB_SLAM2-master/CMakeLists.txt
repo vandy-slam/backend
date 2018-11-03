@@ -94,6 +94,6 @@ include_directories( ${Boost_INCLUDE_DIR} )
 # Build our library
 add_library( slam_map SHARED slam_map.cpp )
 
-target_link_libraries( slam_map.cpp ${Boost_LIBRARIES} ${PYTHON_LIBRARIES} slam_map )
+target_link_libraries( slam_map ${Boost_LIBRARIES} ${PYTHON_LIBRARIES} slam_map )
 # don't prepend wrapper library name with lib
 set_target_properties( slam_map PROPERTIES PREFIX "" )

@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from sensors import parse_for_sensor_data, DataPoint
 from cpp_slam_wrapper import SLAMStep, SLAMMap
 import time
@@ -7,6 +8,7 @@ import time
 OK_RESPONSE = "OK"
 
 app = Flask(__name__)
+CORS(app)
 
 user_SLAM_map_dict = {}
 

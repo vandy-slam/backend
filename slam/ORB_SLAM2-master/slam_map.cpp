@@ -108,6 +108,7 @@ struct SLAMMap
 
     void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vector<double> &vTimestamps)
     {
+        cout << strFile << " ------------\n";
         ifstream f;
         f.open(strFile.c_str());
 

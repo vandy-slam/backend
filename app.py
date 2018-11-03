@@ -24,18 +24,22 @@ def get_2d_map_coords():
 
     stub_data = {
         0: {
+            'type': 'Wall',
             'x': 0,
             'y': 0
         },
         1: {
+            'type': 'Wall',
             'x': 1,
             'y': 0,
         },
         2: {
+            'type': 'Wall',
             'x': 1,
             'y': 1,
         },
         3: {
+            'type': 'Wall',
             'x': 0,
             'y': 1
         }

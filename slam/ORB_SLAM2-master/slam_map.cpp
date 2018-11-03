@@ -9,8 +9,8 @@
 
 struct SLAMMap
 {
-    SLAMap(std::string map_name) {};
-    std::string test() {return "test"};
+    SLAMMap(std::string map_name) {}
+    std::string test() {return "test";}
 };
 
 #include <boost/python.hpp>

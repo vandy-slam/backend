@@ -87,5 +87,5 @@ ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
 # Build examples
 
 PYTHON_ADD_MODULE(slam_map slam_map.cpp)
-# FILE(COPY slam_map.py DESTINATION .)
+FILE(COPY slam_map.py DESTINATION .)
 

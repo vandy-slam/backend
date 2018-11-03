@@ -1,6 +1,16 @@
 cmake_minimum_required(VERSION 2.8)
 project(slam_map)
 
+# Build examples
+
+if(APPLE)
+   set(CMAKE_SHARED_LIBRARY_SUFFIX ".so")
+endif(APPLE)
+
+# Find necessary packages
+find_package( PythonLibs 2.7 REQUIRED )
+find_package( Boost COMPONENTS python REQUIRED )
+
 IF(NOT CMAKE_BUILD_TYPE)
   SET(CMAKE_BUILD_TYPE Release)
 ENDIF()
@@ -44,9 +54,11 @@ ${PROJECT_SOURCE_DIR}
 ${PROJECT_SOURCE_DIR}/include
 ${EIGEN3_INCLUDE_DIR}
 ${Pangolin_INCLUDE_DIRS}
+${Boost_INCLUDE_DIR}
+${PYTHON_INCLUDE_DIRS}
 )
 
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+# set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
 add_library(${PROJECT_NAME} SHARED
 slam_map.cpp
@@ -71,30 +83,14 @@ src/Initializer.cc
 src/Viewer.cc
 )
 
-# Build examples
-
-if(APPLE)
-   set(CMAKE_SHARED_LIBRARY_SUFFIX ".so")
-endif(APPLE)
-
-# Find necessary packages
-find_package( PythonLibs 2.7 REQUIRED )
-include_directories( ${PYTHON_INCLUDE_DIRS} )
-
-find_package( Boost COMPONENTS python REQUIRED )
-include_directories( ${Boost_INCLUDE_DIR} )
-
-# don't prepend wrapper library name with lib
-set_target_properties( slam_map PROPERTIES PREFIX "" )
-
 target_link_libraries(${PROJECT_NAME}
 ${OpenCV_LIBS}
 ${EIGEN3_LIBS}
 ${Pangolin_LIBRARIES}
 ${PROJECT_SOURCE_DIR}/Thirdparty/DBoW2/lib/libDBoW2.so
 ${PROJECT_SOURCE_DIR}/Thirdparty/g2o/lib/libg2o.so
-${Boost_LIBRARIES}
-${PYTHON_LIBRARIES}
+${Boost_LIBRARIES} ${PYTHON_LIBRARIES}
 )
 
-
+# don't prepend wrapper library name with lib
+set_target_properties( ${PROJECT_NAME} PROPERTIES PREFIX "" )

@@ -21,13 +21,13 @@ struct SLAMMap
     SLAMMap(std::string map_name) {
         init(TEST);
     }
-    SLAMMAp() {
+    SLAMMap() {
         this(TEST);
     }
 
     void init(std::string map_name) {
         string arg1, arg2, arg3;
-        SLAM = ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
+        SLAM = new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
 
         vector<string> vstrImageFilenames;
         vector<double> vTimestamps;
@@ -65,7 +65,7 @@ struct SLAMMap
 #endif
 
             // Pass the image to the SLAM system
-            SLAM.TrackMonocular(im,tframe);
+            SLAM->TrackMonocular(im,tframe);
 
 #ifdef COMPILEDWITHC11
             std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
@@ -89,6 +89,7 @@ struct SLAMMap
             if(ttrack<T)
                 usleep((T-ttrack)*1e6);
         }
+        delete SLAM;
     }
 
     void get_args(string map_name, string &arg1, string &arg2, string &arg3) {
@@ -103,7 +104,7 @@ struct SLAMMap
 
     string test() {return TEST;}
 
-    ORB_SLAM2::System SLAM;
+    ORB_SLAM2::System* SLAM;
 };
 
 #include <boost/python.hpp>

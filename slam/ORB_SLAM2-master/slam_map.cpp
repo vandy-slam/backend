@@ -27,6 +27,9 @@ struct SLAMMap
 
     void init(std::string map_name) {
         string arg1, arg2, arg3;
+
+        get_args(map_name, arg1, arg2, arg3);
+
         SLAM = new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
 
         vector<string> vstrImageFilenames;
@@ -92,7 +95,7 @@ struct SLAMMap
         delete SLAM;
     }
 
-    void get_args(string map_name, string &arg1, string &arg2, string &arg3) {
+    void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {
         if (map_name == TEST) {
             arg1 = "./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt";
             arg2 = "./Examples/Monocular/TUM1.yaml";

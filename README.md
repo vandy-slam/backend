@@ -10,6 +10,18 @@ Base url: https://vandyhacks-slam.herokuapp.com/
 - expected query parameters: none
 - output: json with coords of point cloud map (see bottom for example)
 
+## map names
+- path: map/names
+- request type: GET
+- expected query parameters: none
+- output: json with map names (see bottom for example)
+
+## add map destination
+- path: map/save/destination
+- request type: POST
+- expected form parameters: x, y, map_name, destination_name
+- ouput: OK
+
 ## start navigation (MUST BE HIT WITH USER ID BEFORE STARTING NAVIGATION)
 - path: directions/start
 - request type: POST

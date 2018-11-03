@@ -19,8 +19,8 @@ Base url: https://vandyhacks-slam.herokuapp.com/
 ## add map destination
 - path: map/save/destination
 - request type: POST
-- expected form parameters: x, y, map_name, destination_name
-- ouput: OK
+- expected form parameters: 'x', 'y', 'map_name', 'destination_name'
+- ouput: "OK" if things went alright
 
 ## start navigation (MUST BE HIT WITH USER ID BEFORE STARTING NAVIGATION)
 - path: directions/start

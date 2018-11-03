@@ -37,10 +37,11 @@ def get_2d_map_coords():
 @app.route('/directions/step', methods=['POST'])
 def get_directions():
     img = request.form.get('image')
+    user = request.form.get('user')
     sensor_data = parse_for_sensor_data(request.form)
     next_data = DataPoint(sensor_data, img)
     # Do stuff to C++ class here
-    return jsonify(SLAMMap.take_step(next_data))
+    return jsonify(user_SLAM_map_dict[user].take_step(next_data))
 
 
 @app.route('/directions/start', methods=['POST'])
@@ -64,3 +65,7 @@ def begin_directions():
 def end_directions():
     # Destroy C++ object here
     return OK_RESPONSE
+
+
+if __name__ == "__main__":
+    app.run()

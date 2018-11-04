@@ -122,11 +122,15 @@ struct SLAMMap
         }
     }
 
-    vector<cv::Mat> get_points() {
-        vector<cv::Mat> pts;
+    vector<double> get_points() {
+        vector<double> pts;
         vector<ORB_SLAM2::MapPoint*> map_pts = SLAM->GetTrackedMapPoints();
         for (auto const &map_pt : map_pts) {
-            pts.push_back(map_pt->GetWorldPos());
+            vector<double> pt;
+            for (int coord = 0; coord < 3; coord++) {
+                pt.push_back(map_pt->at<double>(coord));
+            }
+            pts.push_back(pt);
         }
         return pts;
     }

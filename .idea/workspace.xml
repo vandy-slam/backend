@@ -46,7 +46,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -55,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="240">
+              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <marker date="1541274892230" expanded="true" signature="390:450" ph="..." />
@@ -169,6 +169,17 @@
             <path>
               <item name="vandyhacks" type="b2602c69:ProjectViewProjectNode" />
               <item name="vandyhacks" type="462c0819:PsiDirectoryNode" />
+              <item name="slam" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vandyhacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vandyhacks" type="462c0819:PsiDirectoryNode" />
+              <item name="slam" type="462c0819:PsiDirectoryNode" />
+              <item name="ORB_SLAM2-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vandyhacks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vandyhacks" type="462c0819:PsiDirectoryNode" />
               <item name="venv" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -249,13 +260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cpp_slam_wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -283,8 +287,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="240">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <marker date="1541274892230" expanded="true" signature="390:450" ph="..." />
@@ -296,6 +300,13 @@
             <marker date="1541274892230" expanded="true" signature="1658:1663" ph="..." />
             <marker date="1541274892230" expanded="true" signature="2145:2150" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -19,7 +19,7 @@ struct SLAMMap
 {
 
 
-    SLAMMap(string map_name, arg1, arg2, arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false))
+    SLAMMap(string map_name, string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false))
     {
 
         vector<string> vstrImageFilenames;

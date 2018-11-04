@@ -124,7 +124,7 @@ struct SLAMMap
 
     vector<vector<double>> get_points() {
         vector<vector<double>> pts;
-=        vector<MapPoint*>  map_pts = SLAM->GetTrackedMapPoints();
+        vector<MapPoint*>  map_pts = SLAM->GetTrackedMapPoints();
         for (auto map_pt : map_pts) {
             vector<double> pt;
             for (int coord = 0; coord < 3; coord++) {

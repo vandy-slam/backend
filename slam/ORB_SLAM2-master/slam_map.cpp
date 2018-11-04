@@ -15,37 +15,10 @@
 
 using namespace std;
 
-struct SLAMMap
+class SLAMMap
 {
 
     SLAMMap(string map_name) {
-        init(map_name, this->SLAM);
-    }
-    SLAMMap() {
-        SLAMMap(TEST);
-    }
-
-    ~SLAMMap() {
-        delete this->SLAM;
-    }
-
-    void check() {
-        if (this->SLAM == nullptr) {
-            cout << "is null\n";
-        } else {
-            cout << "is NOT null \n";
-        }
-    }
-
-    vector<int> get_points() {
-        vector<int> pts;
-        for (auto pt : this->SLAM->GetTrackedMapPoints()) {
-            cout << "pt: " << pt->GetWorldPos() << endl;
-        }
-        return pts;
-    }
-
-    void init(std::string &map_name, ORB_SLAM2::System* &SLAM) {
         string arg1, arg2, arg3;
 
         get_args(map_name, arg1, arg2, arg3);
@@ -114,6 +87,25 @@ struct SLAMMap
         }
         cout << "done initing\n";
     }
+    SLAMMap() {
+        SLAMMap(TEST);
+    }
+
+    void check() {
+        if (this->SLAM == nullptr) {
+            cout << "is null\n";
+        } else {
+            cout << "is NOT null \n";
+        }
+    }
+
+    vector<int> get_points() {
+        vector<int> pts;
+        for (auto pt : this->SLAM->GetTrackedMapPoints()) {
+            cout << "pt: " << pt->GetWorldPos() << endl;
+        }
+        return pts;
+    }
 
     void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {
         if (map_name == TEST) {
@@ -127,7 +119,7 @@ struct SLAMMap
 
     string test() {return TEST;}
 
-    ORB_SLAM2::System* SLAM;
+    std::unique_ptr<ORB_SLAM2::System>* SLAM;
 
     void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vector<double> &vTimestamps)
     {

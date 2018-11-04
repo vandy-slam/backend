@@ -16,6 +16,29 @@
 
 using namespace std;
 
+struct PointMap {
+    PointMap();
+
+    int num_pts() {
+        return pts.size();
+    }
+
+    vector<vector<double>> pts;
+
+    double pt_at(int vect, int coord) {
+        return pts.at(vect).at(coord);
+    }
+
+    void add_pt(ORB_SLAM2::MapPoint *pt) {
+        vector<double> new_pt;
+        for (int i = 0; i < 3; i++) {
+            new_pt.push_back(pt->GetWorldPos().at<double>(i));
+        }
+        pts.push_back(new_pt);
+    }
+};
+
+
 struct SLAMMap
 {
 
@@ -125,15 +148,13 @@ struct SLAMMap
         }
     }
 
-    vector<vector<double>> get_points() {
-        vector<vector<double>> pts;
+    struct PointMap get_points() {
+        struct PointMap pts;
         vector<ORB_SLAM2::MapPoint*> map_pts = SLAM->GetTrackedMapPoints();
         cout << map_pts.size();
-//        for (ORB_SLAM2::MapPoint* &map_pt : map_pts) {
-//            vector<double> pt;
-//            cout << map_pt->GetWorldPos();
-//            pts.push_back(pt);
-//        }
+        for (ORB_SLAM2::MapPoint* &map_pt : map_pts) {
+            pts.add_pt(map_pt);
+        }
         return pts;
     }
 
@@ -184,6 +205,7 @@ struct SLAMMap
 
 };
 
+
 #include <boost/python.hpp>
 using namespace boost::python;
 
@@ -194,6 +216,11 @@ BOOST_PYTHON_MODULE(slam_map)
                         .def("test", &SLAMMap::test)
                         .def("get_pts", &SLAMMap::get_points)
                         .def("check", &SLAMMap::check)
+                ;
+
+                class_<PointMap>("point_map", init<>())
+                        .def("num_pts", &PointMap::num_pts)
+                        .def("coord_at" &PointMap::pt_at)
                 ;
 
         }

@@ -87,7 +87,7 @@ struct SLAMMap
 
     SLAMMap() {
         string arg1, arg2, arg3;
-        get_args(map_name, arg1, arg2, arg3);
+        get_args(TEST, arg1, arg2, arg3);
 
         SLAMMap(TEST, arg1, arg2, arg3);
     }

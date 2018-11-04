@@ -127,7 +127,7 @@ struct SLAMMap
         for (auto const &map_pt : SLAM->GetTrackedMapPoints()) {
             vector<double> pt;
             for (int coord = 0; coord < 3; coord++) {
-                pt.push_back(map_pt.GetWorldPos().at(coord));
+                pt.push_back(map_pt->GetWorldPos().at(coord));
             }
             pts.push_back(pt);
         }

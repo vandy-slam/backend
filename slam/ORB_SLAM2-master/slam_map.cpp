@@ -17,7 +17,7 @@
 using namespace std;
 
 struct PointMap {
-    PointMap();
+    PointMap() {}
 
     int num_pts() {
         return pts.size();
@@ -220,7 +220,7 @@ BOOST_PYTHON_MODULE(slam_map)
 
                 class_<PointMap>("point_map", init<>())
                         .def("num_pts", &PointMap::num_pts)
-                        .def("coord_at" &PointMap::pt_at)
+                        .def("pt_at" &PointMap::pt_at)
                 ;
 
         }

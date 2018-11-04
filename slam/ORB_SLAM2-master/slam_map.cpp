@@ -97,7 +97,7 @@ struct SLAMMap
         string name = TEST;
         get_args(name, arg1, arg2, arg3);
 
-        SLAMMap(arg1, arg2, arg3);
+        *this = SLAMMap(arg1, arg2, arg3);
     }
 
     void check() {

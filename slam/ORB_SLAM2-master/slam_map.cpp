@@ -18,7 +18,7 @@ using namespace std;
 struct SLAMMap
 {
 
-    SLAMMap(std::string map_name) {
+    SLAMMap(std::string &map_name) {
         init(map_name, this->SLAM);
     }
     SLAMMap() {
@@ -45,7 +45,7 @@ struct SLAMMap
         return pts;
     }
 
-    void init(std::string map_name, &ORB_SLAM2::System *SLAM) {
+    void init(std::string &map_name, ORB_SLAM2::System* &SLAM) {
         string arg1, arg2, arg3;
 
         get_args(map_name, arg1, arg2, arg3);

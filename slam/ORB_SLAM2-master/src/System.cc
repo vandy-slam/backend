@@ -65,8 +65,7 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
     mpVocabulary = new ORBVocabulary();
     cout << "new vocab created\n";
     cout << strVocFile << " is file name!!!!!\n";
-    // bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);
-    bool bVocLoad = true;
+    bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);
     if(!bVocLoad)
     {
         cerr << "Wrong path to vocabulary. " << endl;

@@ -18,7 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="241af568-9e18-4da2-a16b-05db45c89ce0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/System.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/System.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,9 +61,9 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cc" value="151" />
+          <entry key="cc" value="154" />
           <entry key="cpp" value="1015" />
-          <entry key="h" value="41" />
+          <entry key="h" value="71" />
           <entry key="py" value="58" />
           <entry key="sh" value="20" />
           <entry key="txt" value="193" />
@@ -71,7 +73,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="193" />
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="1206" />
+          <entry key="ObjectiveC" value="1239" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="Python" value="58" />
         </counts>
@@ -84,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/slam_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1366">
-              <caret line="46" column="53" lean-forward="true" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -92,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/System.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="116">
+              <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -102,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -143,8 +145,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="1326" column="23" selection-start-line="1326" selection-start-column="23" selection-end-line="1326" selection-end-column="23" />
+            <state relative-caret-position="356">
+              <caret line="1423" column="32" selection-start-line="1423" selection-start-column="32" selection-end-line="1423" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -339,12 +341,12 @@
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
       <workItem from="1541275102817" duration="4453000" />
-      <workItem from="1541311402374" duration="822000" />
+      <workItem from="1541311402374" duration="991000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5290000" />
+    <option name="totallyTimeSpent" value="5459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="298" y="27" width="977" height="967" extended-state="0" />
@@ -452,27 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/ORBVocabulary.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-          <folding>
-            <element signature="e#878#917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/slam_map.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1366">
-          <caret line="46" column="53" lean-forward="true" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -493,17 +478,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/System.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="116">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/ORBVocabulary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding>
+            <element signature="e#878#917#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="1326" column="23" selection-start-line="1326" selection-start-column="23" selection-end-line="1326" selection-end-column="23" />
+        <state relative-caret-position="356">
+          <caret line="1423" column="32" selection-start-line="1423" selection-start-column="32" selection-end-line="1423" selection-end-column="32" />
         </state>
       </provider>
     </entry>

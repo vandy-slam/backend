@@ -1421,6 +1421,8 @@ bool TemplatedVocabulary<TDescriptor,F>::loadFromTextFile(const std::string &fil
         }
     }
 
+    cout << "vocab stuff lol\n";
+
     return true;
 
 }

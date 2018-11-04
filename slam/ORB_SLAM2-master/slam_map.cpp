@@ -28,11 +28,15 @@ struct PointMap {
     }
 
     void add_pt(ORB_SLAM2::MapPoint *pt) {
-        vector<double> new_pt;
-        for (int i = 0; i < 3; i++) {
-            new_pt.push_back(pt->GetWorldPos().at<double>(i));
+        if (pt != nullptr) {
+            vector<double> new_pt;
+            for (int i = 0; i < 3; i++) {
+                new_pt.push_back(pt->GetWorldPos().at<double>(i));
+            }
+            pts.push_back(new_pt);
+        } else {
+            cout << "null\n";
         }
-        pts.push_back(new_pt);
     }
 
     vector<vector<double>> pts;

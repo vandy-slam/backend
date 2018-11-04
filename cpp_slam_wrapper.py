@@ -1,3 +1,5 @@
+import slam.ORB_SLAM2-master.slam_map
+
 USER_ORIENTATION = 'actual_orientation'
 CORRECT_ORIENTATION = "correct_orientation"
 POSITION = 'position'

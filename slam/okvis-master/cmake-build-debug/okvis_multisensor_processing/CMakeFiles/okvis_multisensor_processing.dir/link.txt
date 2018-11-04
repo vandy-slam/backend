@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libokvis_multisensor_processing.a  CMakeFiles/okvis_multisensor_processing.dir/src/ThreadedKFVio.cpp.o CMakeFiles/okvis_multisensor_processing.dir/src/ImuFrameSynchronizer.cpp.o CMakeFiles/okvis_multisensor_processing.dir/src/FrameSynchronizer.cpp.o CMakeFiles/okvis_multisensor_processing.dir/src/VioVisualizer.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libokvis_multisensor_processing.a

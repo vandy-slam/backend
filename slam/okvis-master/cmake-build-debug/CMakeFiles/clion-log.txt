@@ -1,0 +1,63 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/liamkelly/vandyhacks/slam/okvis-master
+-- The C compiler identification is AppleClang 9.1.0.9020039
+-- The CXX compiler identification is AppleClang 9.1.0.9020039
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc
+-- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++
+-- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Warning at CMakeLists.txt:52 (message):
+  CMAKE_BUILD_TYPE not set to 'Release'.  Performance may be terrible.
+
+
+-- Assuming SSE instructions available.
+-- Found Eigen: /usr/local/include/eigen3 (Required is at least version "2.91.0") 
+-- Found PkgConfig: /usr/local/bin/pkg-config (found version "0.29.2") 
+-- Checking for module 'visensor'
+--   No package 'visensor' found
+-- Could NOT find VISensorDriver (missing: VISensorDriver_LIBRARY VISensorDriver_INCLUDE_DIR) 
+-- libvisensor not found
+-- Found Glog: /usr/local/include  
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - found
+-- Found Threads: TRUE  
+-- Found BLAS: /System/Library/Frameworks/Accelerate.framework  
+-- Found AMD library: /usr/local/lib/libamd.dylib
+-- Found AMD header in: /usr/local/include
+-- Found CAMD library: /usr/local/lib/libcamd.dylib
+-- Found CAMD header in: /usr/local/include
+-- Found COLAMD library: /usr/local/lib/libcolamd.dylib
+-- Found COLAMD header in: /usr/local/include
+-- Found CCOLAMD library: /usr/local/lib/libccolamd.dylib
+-- Found CCOLAMD header in: /usr/local/include
+-- Found CHOLMOD library: /usr/local/lib/libcholmod.dylib
+-- Found CHOLMOD header in: /usr/local/include
+-- Found SuiteSparseQR library: /usr/local/lib/libspqr.dylib
+-- Found SuiteSparseQR header in: /usr/local/include
+-- Found Intel Thread Building Blocks (TBB) library: /usr/local/lib/libtbb.dylib, assuming SuiteSparseQR was compiled with TBB.
+-- Found Intel Thread Building Blocks (TBB) Malloc library: /usr/local/lib/libtbbmalloc.dylib
+-- Found SuiteSparse_config library: /usr/local/lib/libsuitesparseconfig.dylib
+-- Found SuiteSparse_config header in: /usr/local/include
+-- Found METIS library: /usr/local/lib/libmetis.dylib.
+-- OpenMP NOT found
+-- NOTE: Suppressing some warnings when compiling OpenGV.
+-- Found OpenCV: /usr/local (found version "3.4.3") found components:  core highgui imgproc features2d 
+-- Deactivating timers.
+-- Deactivating timers.
+-- /Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_multisensor_processing/okvisConfig.hpp
+-- Boost version: 1.60.0
+-- Found the following Boost libraries:
+--   filesystem
+--   system
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug

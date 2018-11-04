@@ -1,0 +1,13 @@
+# Target labels
+ brisk_external
+# Source files and their labels
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/CMakeFiles/brisk_external
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/CMakeFiles/brisk_external.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/CMakeFiles/brisk_external-complete.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-install.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-mkdir.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-download.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-update.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-patch.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-configure.rule
+/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/src/brisk_external-stamp/brisk_external-build.rule

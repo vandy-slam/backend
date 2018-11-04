@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libokvis_matcher.a  CMakeFiles/okvis_matcher.dir/src/DenseMatcher.cpp.o CMakeFiles/okvis_matcher.dir/src/MatchingAlgorithm.cpp.o CMakeFiles/okvis_matcher.dir/src/ThreadPool.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libokvis_matcher.a

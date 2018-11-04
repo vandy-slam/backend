@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="okvis_time"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\brisk\;CMake Files\cmake-build-debug\brisk\tmp\;CMake Files\cmake-build-debug\ceres\;CMake Files\cmake-build-debug\ceres\tmp\;CMake Files\cmake-build-debug\opengv\;CMake Files\cmake-build-debug\opengv\tmp\;CMake Files\okvis_util\;CMake Files\okvis_kinematics\;CMake Files\okvis_time\;CMake Files\okvis_cv\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\OpenCV\;CMake Files\okvis_common\;CMake Files\okvis_ceres\;CMake Files\okvis_timing\;CMake Files\okvis_matcher\;CMake Files\okvis_frontend\;CMake Files\okvis_multisensor_processing\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="okvis_time">
+				<Option output="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/libokvis_time.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_util/include"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_kinematics/include"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_time/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 okvis_time"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="okvis_time/fast">
+				<Option output="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/libokvis_time.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/include"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_util/include"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_kinematics/include"/>
+					<Add directory="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_time/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 okvis_time/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/okvis_time/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_time/src/Duration.cpp">
+			<Option target="okvis_time"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_time/src/Time.cpp">
+			<Option target="okvis_time"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/FindCXSparse.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/FindEigen.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/FindGlog.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/FindSuiteSparse.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/FindVISensor.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/okvisConfig.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/okvisConfig.hpp.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake/okvisConfigVersion.cmake.in">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/brisk/tmp/brisk_external-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\brisk\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/ceres/tmp/ceres_external-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\ceres\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/cmake-build-debug/opengv/tmp/opengv_external-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug\opengv\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_util\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_kinematics/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_kinematics\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_time/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_time\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_cv/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_cv\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/../../../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/../../../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/../../../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/../../../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_common/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_common\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_ceres/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_ceres\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_timing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_timing\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_matcher/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_matcher\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_frontend/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_frontend\"/>
+		</Unit>
+		<Unit filename="/Users/liamkelly/vandyhacks/slam/okvis-master/okvis_multisensor_processing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\okvis_multisensor_processing\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,1 @@
+cmd='/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake;-DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>;-DCMAKE_BUILD_TYPE:STRING=Debug;-DCMAKE_CXX_FLAGS= -march=native -Wall -std=c++11 -fPIC -mssse3;-DBUILD_EXAMPLES:BOOL=OFF;-DBUILD_TESTING:BOOL=OFF;-GCodeBlocks - Unix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

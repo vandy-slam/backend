@@ -22,6 +22,13 @@ struct SLAMMap
         delete SLAM;
     }
 
+    vector<double> localize_with_image(std::string img_path) {
+        cv::Mat im = cv::imread(img_path), CV_LOAD_IMAGE_UNCHANGED);
+
+    }
+
+
+
     SLAMMap(string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false)) {
 
         vector<string> vstrImageFilenames;
@@ -105,12 +112,12 @@ struct SLAMMap
             cout << "is null\n";
         } else {
             cout << "is NOT null \n";
-            cout << SLAM->GetTrackedMapPoints().size() << " is the size lol\n";
         }
     }
 
     vector<int> get_points() {
         vector<int> pts;
+        cout << SLAM->GetTrackedMapPoints().size() << " is the size lol\n";
         for (auto pt : SLAM->GetTrackedMapPoints()) {
             cout << "pt: " << pt->GetWorldPos() << endl;
         }

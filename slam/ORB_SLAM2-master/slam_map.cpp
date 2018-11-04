@@ -18,7 +18,7 @@ using namespace std;
 struct SLAMMap
 {
 
-    SLAMMap(std::string &map_name) {
+    SLAMMap(string map_name) {
         init(map_name, this->SLAM);
     }
     SLAMMap() {

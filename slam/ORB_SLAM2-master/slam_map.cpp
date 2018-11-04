@@ -128,8 +128,8 @@ struct SLAMMap
     vector<vector<double>> get_points() {
         vector<vector<double>> pts;
         vector<ORB_SLAM2::MapPoint*> map_pts = SLAM->GetTrackedMapPoints();
-        cout << map_pts->size();
-        for (auto const &map_pt : map_pts) {
+        cout << map_pts.size();
+        for (ORB_SLAM2::MapPoint* &map_pt : map_pts) {
             vector<double> pt;
             cout << map_pt->GetWorldPos();
             pts.push_back(pt);

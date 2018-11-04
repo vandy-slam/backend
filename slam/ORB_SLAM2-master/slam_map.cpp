@@ -18,9 +18,11 @@ using namespace std;
 struct SLAMMap
 {
 
+    ~SLAMMap() {
+        delete SLAM;
+    }
 
-    SLAMMap(string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false))
-    {
+    SLAMMap(string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false)) {
 
         vector<string> vstrImageFilenames;
         vector<double> vTimestamps;
@@ -83,6 +85,11 @@ struct SLAMMap
                 usleep((T-ttrack)*1e6);
         }
         cout << "done initing\n";
+        if (SLAM == nullptr) {
+            cout << "is null\n";
+        } else {
+            cout << "is NOT null \n";
+        }
     }
 
     SLAMMap() {
@@ -94,7 +101,7 @@ struct SLAMMap
     }
 
     void check() {
-        if (this->SLAM == nullptr) {
+        if (SLAM == nullptr) {
             cout << "is null\n";
         } else {
             cout << "is NOT null \n";

@@ -30,7 +30,11 @@ struct SLAMMap
     }
 
     void check() {
-        cout << "size of pts: " << SLAM->GetTrackedMapPoints().size() << endl;
+        if (SLAM == nullptr) {
+            cout << "is null\n";
+        } else {
+            cout << "is NOT null \n";
+        }
     }
 
     vector<int> get_points() {

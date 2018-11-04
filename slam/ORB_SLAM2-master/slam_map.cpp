@@ -128,7 +128,7 @@ struct SLAMMap
         for (auto const &map_pt : map_pts) {
             vector<double> pt;
             for (int coord = 0; coord < 3; coord++) {
-                pt.push_back(map_pt->at<double>(coord));
+                pt.push_back(map_pt->GetWorldPos().at<double>(coord));
             }
             pts.push_back(pt);
         }

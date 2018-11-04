@@ -20,17 +20,13 @@ class SLAMMap
 
 public:
 
-    SLAMMap(string map_name) {
-        string arg1, arg2, arg3;
-
-        get_args(map_name, arg1, arg2, arg3);
-
+    SLAMMap(string map_name, string arg1, string arg2, string arg3): SLAM(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false)
+     {
         vector<string> vstrImageFilenames;
         vector<double> vTimestamps;
         string strFile = arg3+"/rgb.txt";
         LoadImages(strFile, vstrImageFilenames, vTimestamps);
 
-        SLAM = new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
 
         int nImages = vstrImageFilenames.size();
 
@@ -63,7 +59,7 @@ public:
 #endif
 
             // Pass the image to the SLAM system
-            SLAM->TrackMonocular(im,tframe);
+            SLAM.TrackMonocular(im,tframe);
 
 #ifdef COMPILEDWITHC11
             std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
@@ -90,11 +86,13 @@ public:
         cout << "done initing\n";
     }
     SLAMMap() {
-        SLAMMap(TEST);
+        string arg1, arg2, arg3;
+        get_args(map_name, arg1, arg2, arg3);
+        SLAMMap(TEST, arg1, arg2, arg3);
     }
 
     void check() {
-        if (this->SLAM == nullptr) {
+        if (SLAM == nullptr) {
             cout << "is null\n";
         } else {
             cout << "is NOT null \n";
@@ -121,7 +119,7 @@ public:
 
     string test() {return TEST;}
 
-    ORB_SLAM2::System *SLAM;
+    ORB_SLAM2::System SLAM;
 
     void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vector<double> &vTimestamps)
     {

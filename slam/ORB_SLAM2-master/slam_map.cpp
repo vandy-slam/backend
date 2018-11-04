@@ -121,7 +121,7 @@ public:
 
     string test() {return TEST;}
 
-    std::unique_ptr<ORB_SLAM2::System>* SLAM;
+    ORB_SLAM2::System *SLAM;
 
     void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vector<double> &vTimestamps)
     {

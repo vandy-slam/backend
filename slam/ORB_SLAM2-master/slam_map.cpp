@@ -23,15 +23,15 @@ struct PointMap {
         return pts.size();
     }
 
-    double pt_at(int vect, int coord) {
+    float pt_at(int vect, int coord) {
         return pts.at(vect).at(coord);
     }
 
     void add_pt(ORB_SLAM2::MapPoint *pt) {
         if (pt != nullptr) {
-            vector<double> new_pt;
+            vector<float> new_pt;
             for (int i = 0; i < 3; i++) {
-                new_pt.push_back(pt->GetWorldPos().at<double>(i));
+                new_pt.push_back(pt->GetWorldPos().at<float>(i));
             }
             pts.push_back(new_pt);
         } else {
@@ -39,7 +39,7 @@ struct PointMap {
         }
     }
 
-    vector<vector<double>> pts;
+    vector<vector<float>> pts;
 };
 
 

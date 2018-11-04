@@ -61,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cc" value="154" />
-          <entry key="cpp" value="3763" />
+          <entry key="cpp" value="3766" />
           <entry key="h" value="72" />
           <entry key="py" value="99" />
           <entry key="sh" value="20" />
@@ -72,7 +72,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="193" />
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="3988" />
+          <entry key="ObjectiveC" value="3991" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="Python" value="99" />
         </counts>
@@ -84,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slam_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="492">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
               <folding>
                 <element signature="e#23#40#0" expanded="true" />
                 <element signature="e#1519#1601#0" expanded="true" />
@@ -356,12 +356,12 @@
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
       <workItem from="1541275102817" duration="4453000" />
-      <workItem from="1541311402374" duration="9119000" />
+      <workItem from="1541311402374" duration="9225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13587000" />
+    <option name="totallyTimeSpent" value="13693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -551,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/slam_map.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="492">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding>
             <element signature="e#23#40#0" expanded="true" />
             <element signature="e#1519#1601#0" expanded="true" />

@@ -23,8 +23,6 @@ struct PointMap {
         return pts.size();
     }
 
-    vector<vector<double>> pts;
-
     double pt_at(int vect, int coord) {
         return pts.at(vect).at(coord);
     }
@@ -36,6 +34,8 @@ struct PointMap {
         }
         pts.push_back(new_pt);
     }
+
+    vector<vector<double>> pts;
 };
 
 

@@ -19,8 +19,8 @@ struct SLAMMap
 {
 
 
-    SLAMMap(string map_name, arg1, arg2, arg3) {
-        SLAM(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
+    SLAMMap(string map_name, arg1, arg2, arg3)  SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false))
+    {
 
         vector<string> vstrImageFilenames;
         vector<double> vTimestamps;
@@ -120,7 +120,7 @@ struct SLAMMap
 
     string test() {return TEST;}
 
-    ORB_SLAM2::System SLAM;
+    ORB_SLAM2::System *SLAM = nullptr;
 
     void LoadImages(const string &strFile, vector<string> &vstrImageFilenames, vector<double> &vTimestamps)
     {

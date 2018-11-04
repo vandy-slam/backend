@@ -129,17 +129,17 @@ struct SLAMMap
         vector<vector<double>> pts;
         vector<ORB_SLAM2::MapPoint*> map_pts = SLAM->GetTrackedMapPoints();
         cout << map_pts.size();
-        for (ORB_SLAM2::MapPoint* &map_pt : map_pts) {
-            vector<double> pt;
-            cout << map_pt->GetWorldPos();
-            pts.push_back(pt);
-        }
+//        for (ORB_SLAM2::MapPoint* &map_pt : map_pts) {
+//            vector<double> pt;
+//            cout << map_pt->GetWorldPos();
+//            pts.push_back(pt);
+//        }
         return pts;
     }
 
     void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {
+        arg1 = "Vocabulary/ORBvoc.txt";
         if (map_name == TEST) {
-            arg1 = "Vocabulary/ORBvoc.txt";
             arg2 = "Examples/Monocular/TUM1.yaml";
             arg3 = "./rgbd_dataset_freiburg1_xyz";
         } else {

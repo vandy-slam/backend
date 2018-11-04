@@ -23,14 +23,18 @@ struct SLAMMap
         delete SLAM;
     }
 
-    vector<double> localize_with_image(std::string img_path) {
+    vector<double> localize_with_image(string img_path) {
         cv::Mat im = cv::imread(img_path, CV_LOAD_IMAGE_UNCHANGED);
         vector<double> localization;
 
+        SLAM->TrackMonocular(im, get_time_stamp(img_path));
 
         return localization;
     }
 
+    double get_time_stamp(string img_path) {
+        return 0.0;
+    }
 
     SLAMMap(string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false)) {
 
@@ -126,7 +130,9 @@ struct SLAMMap
         for (auto const &map_pt : map_pts) {
             vector<double> pt;
             for (int coord = 0; coord < 3; coord++) {
-                pt.push_back(map_pt->GetWorldPos().at<double>(coord));
+                double coordinate = map_pt->GetWorldPos().at<double>(coord);
+                cout << coordinate << endl;
+                pt.push_back(coordinate);
             }
             pts.push_back(pt);
         }

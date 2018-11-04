@@ -1321,8 +1321,10 @@ int TemplatedVocabulary<TDescriptor,F>::stopWords(double minWeight)
 {
   int c = 0;
   typename vector<Node*>::iterator wit;
+  cout << "searching\n";
   for(wit = m_words.begin(); wit != m_words.end(); ++wit)
   {
+      cout << "search";
     if((*wit)->weight < minWeight)
     {
       ++c;

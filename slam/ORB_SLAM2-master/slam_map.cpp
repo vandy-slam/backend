@@ -29,6 +29,10 @@ struct SLAMMap
         delete SLAM;
     }
 
+    void check() {
+        cout << "size of pts: " << SLAM->GetTrackedMapPoints().size() << endl;
+    }
+
     vector<int> get_points() {
         vector<int> pts;
         for (auto pt : SLAM->GetTrackedMapPoints()) {

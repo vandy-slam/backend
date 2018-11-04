@@ -26,6 +26,8 @@ struct SLAMMap
         cv::Mat im = cv::imread(img_path), CV_LOAD_IMAGE_UNCHANGED);
         vector<double> localization;
 
+
+
         return localization;
     }
 
@@ -54,6 +56,8 @@ struct SLAMMap
             // Read image from file
             im = cv::imread(arg3+"/"+vstrImageFilenames[ni],CV_LOAD_IMAGE_UNCHANGED);
             double tframe = vTimestamps[ni];
+
+            cout << "tframe is: " << trframe << endl;
 
             if(im.empty())
             {
@@ -169,6 +173,8 @@ struct SLAMMap
             }
         }
     }
+
+
 };
 
 #include <boost/python.hpp>

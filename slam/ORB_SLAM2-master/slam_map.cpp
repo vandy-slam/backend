@@ -6,6 +6,7 @@
 #include<algorithm>
 #include<fstream>
 #include<chrono>
+#include<MapPoint.h>
 
 #include<opencv2/core/core.hpp>
 
@@ -121,11 +122,16 @@ struct SLAMMap
         }
     }
 
-    vector<int> get_points() {
-        vector<int> pts;
-        cout << SLAM->GetTrackedMapPoints().size() << " is the size lol\n";
-        for (auto pt : SLAM->GetTrackedMapPoints()) {
-            cout << "pt: " << pt->GetWorldPos() << endl;
+    vector<vector<double>> get_points() {
+        vector<vector<double>> pts;
+        vector<MapPoint *> map_pts = SLAM->GetTrackedMapPoints();
+        for (int i = 0; i < map_pts.size(); i++) {
+            vector<double> pt;
+            for (int coord = 0; coord < 3; coord++) {
+                pt.push_back(map_pts.at(i).GetWorldPos().at(coord));
+            }
+            cout << pt << endl;
+            pts.push_back(pt);
         }
         return pts;
     }

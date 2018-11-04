@@ -877,6 +877,6 @@ void ThreadedKFVio::publisherLoop() {
   }
 }
 
-void 
+void
 
 }  // namespace okvis

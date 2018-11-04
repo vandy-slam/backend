@@ -24,15 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f23215ca-84a5-49e6-a8d5-100dd582108a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lsd_slam-master/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lsd_slam-master/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../okvis_ros-master/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../okvis_ros-master/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ORB_SLAM2-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ORB_SLAM2-master/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f23215ca-84a5-49e6-a8d5-100dd582108a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +37,7 @@
     <session id="-1135307493">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.opened" value="3" />

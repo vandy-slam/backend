@@ -25,6 +25,17 @@ struct SLAMMap
         SLAMMap(TEST);
     }
 
+    ~SLAMMap() {
+        delete SLAM;
+    }
+
+    vector<int> get_points() {
+        vector<int> pts;
+        for (auto pt : SLAM->GetTrackedMapPoints()) {
+            cout << "pt: " << pt->GetWorldPos() << endl;
+        }
+    }
+
     void init(std::string map_name) {
         string arg1, arg2, arg3;
 
@@ -94,7 +105,6 @@ struct SLAMMap
             if(ttrack<T)
                 usleep((T-ttrack)*1e6);
         }
-        delete SLAM;
     }
 
     void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {
@@ -150,6 +160,7 @@ BOOST_PYTHON_MODULE(slam_map)
                 class_<SLAMMap>("slam_map", init<string>())
                         .def(init<>())
                         .def("test", &SLAMMap::test)
+                        .def("get_pts", &SLAMMap::get_points)
                 ;
 
         }

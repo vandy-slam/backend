@@ -1,0 +1,1013 @@
+cmake_minimum_required(VERSION 3.12)
+project(maplab_master)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(algorithms/ceres-error-terms/include)
+include_directories(algorithms/ceres-error-terms/include/ceres-error-terms)
+include_directories(algorithms/ceres-error-terms/include/ceres-error-terms/parameterization)
+include_directories(algorithms/ceres-error-terms/include/ceres-error-terms/test)
+include_directories(algorithms/ceres-error-terms/include/ceres-error-terms/test_posegraph)
+include_directories(algorithms/dense-reconstruction/stereo-dense-reconstruction/include)
+include_directories(algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction)
+include_directories(algorithms/feature-tracking/include)
+include_directories(algorithms/feature-tracking/include/feature-tracking)
+include_directories(algorithms/geometric-vision-algorithms/include)
+include_directories(algorithms/geometric-vision-algorithms/include/geometric-vision)
+include_directories(algorithms/imu-integrator-rk4/include)
+include_directories(algorithms/imu-integrator-rk4/include/imu-integrator)
+include_directories(algorithms/landmark-triangulation/include)
+include_directories(algorithms/landmark-triangulation/include/landmark-triangulation)
+include_directories(algorithms/localization-evaluator/include)
+include_directories(algorithms/localization-evaluator/include/localization-evaluator)
+include_directories(algorithms/loopclosure/descriptor-projection/include)
+include_directories(algorithms/loopclosure/descriptor-projection/include/descriptor-projection)
+include_directories(algorithms/loopclosure/inverted-multi-index/include)
+include_directories(algorithms/loopclosure/inverted-multi-index/include/inverted-multi-index)
+include_directories(algorithms/loopclosure/loop-closure-handler/include)
+include_directories(algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler)
+include_directories(algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler/visualization)
+include_directories(algorithms/loopclosure/loopclosure-common/include)
+include_directories(algorithms/loopclosure/loopclosure-common/include/loopclosure-common)
+include_directories(algorithms/loopclosure/matching-based-loopclosure/include)
+include_directories(algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure)
+include_directories(algorithms/loopclosure/product-quantization/include)
+include_directories(algorithms/loopclosure/product-quantization/include/product-quantization)
+include_directories(algorithms/loopclosure/vocabulary-tree/include)
+include_directories(algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree)
+include_directories(algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/impl)
+include_directories(algorithms/loopclosure/vocabulary-tree/test)
+include_directories(algorithms/map-anchoring/include)
+include_directories(algorithms/map-anchoring/include/map-anchoring)
+include_directories(algorithms/map-optimization/include)
+include_directories(algorithms/map-optimization/include/map-optimization)
+include_directories(algorithms/map-optimization-legacy/include)
+include_directories(algorithms/map-optimization-legacy/include/map-optimization-legacy)
+include_directories(algorithms/map-optimization-legacy/include/map-optimization-legacy/test)
+include_directories(algorithms/map-sparsification/include)
+include_directories(algorithms/map-sparsification/include/map-sparsification)
+include_directories(algorithms/map-sparsification/include/map-sparsification/heuristic)
+include_directories(algorithms/map-sparsification/include/map-sparsification/heuristic/cost-functions)
+include_directories(algorithms/map-sparsification/include/map-sparsification/heuristic/scoring)
+include_directories(algorithms/map-sparsification/include/map-sparsification/optimization)
+include_directories(algorithms/map-sparsification/include/map-sparsification/visualization)
+include_directories(algorithms/online_map_builders/include)
+include_directories(algorithms/online_map_builders/include/online-map-builders)
+include_directories(algorithms/simulation/include)
+include_directories(algorithms/simulation/include/mav_planning_utils)
+include_directories(algorithms/simulation/include/simulation)
+include_directories(algorithms/vi-map-helpers/include)
+include_directories(algorithms/vi-map-helpers/include/vi-map-helpers)
+include_directories(applications/maplab-console/include)
+include_directories(applications/maplab-console/include/maplab-console)
+include_directories(applications/rovioli/include)
+include_directories(applications/rovioli/include/rovioli)
+include_directories(backend/map-manager/include)
+include_directories(backend/map-manager/include/map-manager)
+include_directories(backend/map-manager/include/map-manager/test)
+include_directories(backend/map-resources/include)
+include_directories(backend/map-resources/include/map-resources)
+include_directories(backend/map-resources/include/map-resources/test)
+include_directories(backend/map-resources/include/map-resources/tinyply)
+include_directories(common/aslam-serialization/include)
+include_directories(common/aslam-serialization/include/aslam-serialization)
+include_directories(common/console-common/include)
+include_directories(common/console-common/include/console-common)
+include_directories(common/dense-reconstruction-common/include)
+include_directories(common/dense-reconstruction-common/include/dense-reconstruction)
+include_directories(common/maplab-common/include)
+include_directories(common/maplab-common/include/maplab-common)
+include_directories(common/maplab-common/include/maplab-common/internal)
+include_directories(common/maplab-common/include/maplab-common/test)
+include_directories(common/message_flow/include)
+include_directories(common/message_flow/include/message-flow)
+include_directories(common/vio-common/include)
+include_directories(common/vio-common/include/vio-common)
+include_directories(common/vio-common/include/vio-common/internal)
+include_directories(common/vio-common/include/vio-common/test)
+include_directories(console-plugins/dense-reconstruction-plugin/include)
+include_directories(console-plugins/dense-reconstruction-plugin/include/dense-reconstruction)
+include_directories(console-plugins/landmark-manipulation-plugin/include)
+include_directories(console-plugins/landmark-manipulation-plugin/include/landmark-manipulation-plugin)
+include_directories(console-plugins/loop-closure-plugin/include)
+include_directories(console-plugins/loop-closure-plugin/include/loop-closure-plugin)
+include_directories(console-plugins/map-anchoring-plugin/include)
+include_directories(console-plugins/map-anchoring-plugin/include/map-anchoring-plugin)
+include_directories(console-plugins/map-optimization-legacy-plugin/include)
+include_directories(console-plugins/map-optimization-legacy-plugin/include/map-optimization-legacy-plugin)
+include_directories(console-plugins/map-optimization-plugin/include)
+include_directories(console-plugins/map-optimization-plugin/include/map-optimization-plugin)
+include_directories(console-plugins/map-sparsification-plugin/include)
+include_directories(console-plugins/map-sparsification-plugin/include/map-sparsification-plugin)
+include_directories(console-plugins/mapping-workflows-plugin/include)
+include_directories(console-plugins/mapping-workflows-plugin/include/mapping-workflows-plugin)
+include_directories(console-plugins/pose-graph-manipulation-plugin/include)
+include_directories(console-plugins/pose-graph-manipulation-plugin/include/pose-graph-manipulation-plugin)
+include_directories(console-plugins/statistics-plugin/include)
+include_directories(console-plugins/statistics-plugin/include/statistics-plugin)
+include_directories(console-plugins/vi-map-basic-plugin/include)
+include_directories(console-plugins/vi-map-basic-plugin/include/vi-map-basic-plugin)
+include_directories(console-plugins/vi-map-data-import-export-plugin/include)
+include_directories(console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin)
+include_directories(console-plugins/vi-map-summarization-plugin/include)
+include_directories(console-plugins/vi-map-summarization-plugin/include/vi-map-summarization-plugin)
+include_directories(console-plugins/vi-map-visualization-plugin/include)
+include_directories(console-plugins/vi-map-visualization-plugin/include/vi-map-visualization-plugin)
+include_directories(interfaces/pmvs_interface/include)
+include_directories(interfaces/pmvs_interface/include/dense-reconstruction)
+include_directories(interfaces/voxblox_interface/include)
+include_directories(interfaces/voxblox_interface/include/voxblox-interface)
+include_directories(map-structure/localization-summary-map/include)
+include_directories(map-structure/localization-summary-map/include/localization-summary-map)
+include_directories(map-structure/posegraph/include)
+include_directories(map-structure/posegraph/include/posegraph)
+include_directories(map-structure/posegraph/include/posegraph/example)
+include_directories(map-structure/sensors/include)
+include_directories(map-structure/sensors/include/sensors)
+include_directories(map-structure/vi-map/include)
+include_directories(map-structure/vi-map/include/vi-map)
+include_directories(map-structure/vi-map/include/vi-map/deprecated)
+include_directories(map-structure/vi-map/include/vi-map/test)
+include_directories(test/vi-mapping-test-app/include)
+include_directories(test/vi-mapping-test-app/include/vi-mapping-test-app)
+include_directories(tools/csv-export/include)
+include_directories(tools/csv-export/include/csv-export)
+include_directories(visualization/include)
+include_directories(visualization/include/visualization)
+include_directories(visualization/include/visualization/internal)
+
+add_executable(maplab_master
+        algorithms/ceres-error-terms/include/ceres-error-terms/parameterization/pose-param-jpl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/parameterization/quaternion-param-eigen.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/parameterization/quaternion-param-hamilton.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/parameterization/quaternion-param-jpl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/parameterization/unit3-param.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/test/parameterization-numerical-diff-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/test/parameterization-numerical-diff.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/test_posegraph/loop_closure_constraint.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/test_posegraph/posegraph.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/test_posegraph/posegraph_constraint.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/anchored-inverse-depth-error-term-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/anchored-inverse-depth-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/anchored-inverse-depth-helpers.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/block-pose-prior-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/ceres-signal-handler.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/common.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/generic-prior-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/inertial-error-term-eigen.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/inertial-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/loop-closure-block-pose-error-term-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/loop-closure-block-pose-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/loop-closure-edge-error-term-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/loop-closure-edge-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/pose-prior-error-term-eigen.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/pose-prior-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/position-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/problem-information.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/residual-information.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/six-dof-block-pose-error-term-autodiff-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/six-dof-block-pose-error-term-autodiff.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/six-dof-block-pose-error-term-with-extrinsics-autodiff-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/six-dof-block-pose-error-term-with-extrinsics-autodiff.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/switch-prior-error-term-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/switch-prior-error-term.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/visual-error-term-base.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/visual-error-term-factory-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/visual-error-term-factory.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/visual-error-term-inl.h
+        algorithms/ceres-error-terms/include/ceres-error-terms/visual-error-term.h
+        algorithms/ceres-error-terms/src/parameterization/quaternion-param-eigen.cc
+        algorithms/ceres-error-terms/src/parameterization/quaternion-param-hamilton.cc
+        algorithms/ceres-error-terms/src/parameterization/quaternion-param-jpl.cc
+        algorithms/ceres-error-terms/src/parameterization/unit3-param.cc
+        algorithms/ceres-error-terms/src/block-pose-prior-error-term.cc
+        algorithms/ceres-error-terms/src/ceres-signal-handler.cc
+        algorithms/ceres-error-terms/src/inertial-error-term-eigen.cc
+        algorithms/ceres-error-terms/src/inertial-error-term.cc
+        algorithms/ceres-error-terms/src/pose-prior-error-term-eigen.cc
+        algorithms/ceres-error-terms/src/pose-prior-error-term.cc
+        algorithms/ceres-error-terms/src/position-error-term.cc
+        algorithms/ceres-error-terms/src/problem-information.cc
+        algorithms/ceres-error-terms/test/test_3keyframe_inertial_term_test.cc
+        algorithms/ceres-error-terms/test/test_aid_error_term.cc
+        algorithms/ceres-error-terms/test/test_block_pose_prior_error_term.cc
+        algorithms/ceres-error-terms/test/test_few_points_quaternion_test.cc
+        algorithms/ceres-error-terms/test/test_generic_prior_error_term.cc
+        algorithms/ceres-error-terms/test/test_inertial_term_test.cc
+        algorithms/ceres-error-terms/test/test_inertial_term_test_eigen.cc
+        algorithms/ceres-error-terms/test/test_mission_baseframe_visual_term_test.cc
+        algorithms/ceres-error-terms/test/test_pose_parameterization_test.cc
+        algorithms/ceres-error-terms/test/test_pose_prior_error_term.cc
+        algorithms/ceres-error-terms/test/test_position_error_term.cc
+        algorithms/ceres-error-terms/test/test_quaternion_eigen_parameterization.cc
+        algorithms/ceres-error-terms/test/test_quaternion_parameterization_test.cc
+        algorithms/ceres-error-terms/test/test_six_dof_block_transformation_error_term.cc
+        algorithms/ceres-error-terms/test/test_six_dof_block_transformation_error_term_with_extrinsics.cc
+        algorithms/ceres-error-terms/test/test_switchable_constraints_block_pose_baseframe_test.cc
+        algorithms/ceres-error-terms/test/test_switchable_constraints_block_pose_test.cc
+        algorithms/ceres-error-terms/test/test_unit3_parameterization.cc
+        algorithms/ceres-error-terms/test/test_visual_term_test.cc
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction/aslam-cv-interface.h
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction/disparity-conversion-utils.h
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction/stereo-camera-utils.h
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction/stereo-dense-reconstruction.h
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction/stereo-matcher.h
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/include/dense-reconstruction/stereo-pair-detection.h
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/src/aslam-cv-interface.cpp
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/src/disparity-conversion-utils.cpp
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/src/stereo-camera-utils.cpp
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/src/stereo-dense-reconstruction.cpp
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/src/stereo-matcher.cpp
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/src/stereo-pair-detection.cpp
+        algorithms/dense-reconstruction/stereo-dense-reconstruction/test/test_stereo_dense_reconstruction.cpp
+        algorithms/feature-tracking/include/feature-tracking/feature-detection-extraction.h
+        algorithms/feature-tracking/include/feature-tracking/feature-track-extractor.h
+        algorithms/feature-tracking/include/feature-tracking/feature-tracking-pipeline.h
+        algorithms/feature-tracking/include/feature-tracking/feature-tracking-types.h
+        algorithms/feature-tracking/include/feature-tracking/grided-detector.h
+        algorithms/feature-tracking/include/feature-tracking/vo-feature-tracking-pipeline.h
+        algorithms/feature-tracking/src/feature-detection-extraction.cc
+        algorithms/feature-tracking/src/feature-track-extractor.cc
+        algorithms/feature-tracking/src/feature-tracking-pipeline.cc
+        algorithms/feature-tracking/src/feature-tracking-types.cc
+        algorithms/feature-tracking/src/vo-feature-tracking-pipeline.cc
+        algorithms/feature-tracking/test/test-feature-track-extractor.cc
+        algorithms/geometric-vision-algorithms/include/geometric-vision/five-point-pose-estimator.h
+        algorithms/geometric-vision-algorithms/include/geometric-vision/linear-triangulation.h
+        algorithms/geometric-vision-algorithms/include/geometric-vision/relative-non-central-pnp.h
+        algorithms/geometric-vision-algorithms/include/geometric-vision/rotation-only-detector.h
+        algorithms/geometric-vision-algorithms/src/five-point-pose-estimator.cc
+        algorithms/geometric-vision-algorithms/src/linear-triangulation.cc
+        algorithms/geometric-vision-algorithms/src/relative-non-central-pnp.cc
+        algorithms/geometric-vision-algorithms/src/rotation-only-detector.cc
+        algorithms/geometric-vision-algorithms/test/test_five_point_pose_estimator_test.cc
+        algorithms/geometric-vision-algorithms/test/test_n_view_triangulation.cc
+        algorithms/geometric-vision-algorithms/test/test_pnp_pose_test.cc
+        algorithms/geometric-vision-algorithms/test/test_relative_non_central_pnp.cc
+        algorithms/geometric-vision-algorithms/test/test_rotation_only_detector.cc
+        algorithms/geometric-vision-algorithms/test/test_two_view_triangulation.cc
+        algorithms/imu-integrator-rk4/include/imu-integrator/common.h
+        algorithms/imu-integrator-rk4/include/imu-integrator/imu-integrator-eigen-inl.h
+        algorithms/imu-integrator-rk4/include/imu-integrator/imu-integrator-eigen.h
+        algorithms/imu-integrator-rk4/include/imu-integrator/imu-integrator-inl.h
+        algorithms/imu-integrator-rk4/include/imu-integrator/imu-integrator.h
+        algorithms/imu-integrator-rk4/src/imu-integrator-eigen.cc
+        algorithms/imu-integrator-rk4/src/imu-integrator.cc
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/get_phi_cov_der.m
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/get_state_der.m
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/gyro_omega.m
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/integrate.m
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/interpolate_imu.m
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/q_to_rot_mat.m
+        algorithms/imu-integrator-rk4/test/matlab-imu-integrator/skew3.m
+        algorithms/imu-integrator-rk4/test/imu_integrator_eigen_test_fixture.cc
+        algorithms/imu-integrator-rk4/test/imu_integrator_test_fixture.cc
+        algorithms/imu-integrator-rk4/test/test_imu_integrator_basic_test.cc
+        algorithms/imu-integrator-rk4/test/test_imu_integrator_cov_phi_test.cc
+        algorithms/imu-integrator-rk4/test/test_imu_integrator_eigen_basic_test.cc
+        algorithms/imu-integrator-rk4/test/test_imu_integrator_trajectory_test.cc
+        algorithms/landmark-triangulation/include/landmark-triangulation/landmark-triangulation.h
+        algorithms/landmark-triangulation/include/landmark-triangulation/pose-interpolator.h
+        algorithms/landmark-triangulation/src/landmark-triangulation.cc
+        algorithms/landmark-triangulation/src/pose-interpolator.cc
+        algorithms/landmark-triangulation/test/test_landmark_triangulation.cc
+        algorithms/landmark-triangulation/test/test_pose_interpolator_test.cc
+        algorithms/localization-evaluator/include/localization-evaluator/localization-evaluator.h
+        algorithms/localization-evaluator/include/localization-evaluator/mission-aligner.h
+        algorithms/localization-evaluator/src/localization-evaluator.cc
+        algorithms/localization-evaluator/src/mission-aligner.cc
+        algorithms/localization-evaluator/test/test_localization_evaluator.cc
+        algorithms/loopclosure/descriptor-projection/include/descriptor-projection/build-projection-matrix.h
+        algorithms/loopclosure/descriptor-projection/include/descriptor-projection/descriptor-projection.h
+        algorithms/loopclosure/descriptor-projection/include/descriptor-projection/flags.h
+        algorithms/loopclosure/descriptor-projection/include/descriptor-projection/map-track-extractor.h
+        algorithms/loopclosure/descriptor-projection/include/descriptor-projection/projected-descriptor-quantizer.h
+        algorithms/loopclosure/descriptor-projection/include/descriptor-projection/train-projection-matrix.h
+        algorithms/loopclosure/descriptor-projection/src/build-projection-matrix.cc
+        algorithms/loopclosure/descriptor-projection/src/descriptor-projection.cc
+        algorithms/loopclosure/descriptor-projection/src/flags.cc
+        algorithms/loopclosure/descriptor-projection/src/map-track-extractor.cc
+        algorithms/loopclosure/descriptor-projection/src/projected-descriptor-quantizer.cc
+        algorithms/loopclosure/descriptor-projection/src/train-projection-matrix.cc
+        algorithms/loopclosure/descriptor-projection/test/test_build-projection-matrix.cc
+        algorithms/loopclosure/descriptor-projection/test/test_quantizer-serialization.cc
+        algorithms/loopclosure/inverted-multi-index/include/inverted-multi-index/inverted-multi-index-common.h
+        algorithms/loopclosure/inverted-multi-index/include/inverted-multi-index/inverted-multi-index.h
+        algorithms/loopclosure/inverted-multi-index/include/inverted-multi-index/inverted-multi-product-quantization-index.h
+        algorithms/loopclosure/inverted-multi-index/src/inverted-multi-index.cc
+        algorithms/loopclosure/inverted-multi-index/src/inverted-multi-product-quantization-index.cc
+        algorithms/loopclosure/inverted-multi-index/test/test_inverted-multi-index-common.cc
+        algorithms/loopclosure/inverted-multi-index/test/test_inverted-multi-index.cc
+        algorithms/loopclosure/inverted-multi-index/test/test_inverted-multi-product-quantization-index.cc
+        algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler/visualization/loop-closure-visualizer.h
+        algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler/inlier-index-with-reprojection-error.h
+        algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler/loop-closure-constraint.h
+        algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler/loop-closure-handler.h
+        algorithms/loopclosure/loop-closure-handler/include/loop-closure-handler/loop-detector-node.h
+        algorithms/loopclosure/loop-closure-handler/src/visualization/loop-closure-visualizer.cc
+        algorithms/loopclosure/loop-closure-handler/src/inlier-index-with-reprojection-error.cc
+        algorithms/loopclosure/loop-closure-handler/src/loop-closure-handler.cc
+        algorithms/loopclosure/loop-closure-handler/src/loop-detector-node.cc
+        algorithms/loopclosure/loop-closure-handler/test/test_loop_closure_handling_test.cc
+        algorithms/loopclosure/loopclosure-common/include/loopclosure-common/flags.h
+        algorithms/loopclosure/loopclosure-common/include/loopclosure-common/types.h
+        algorithms/loopclosure/loopclosure-common/src/flags.cc
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/detector-settings.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/helpers.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/index-interface.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/inverted-index-interface.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/inverted-index.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/inverted-multi-index-interface.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/kd-tree-index-interface.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/kd-tree-index.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/loop-detector-interface.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/matching-based-engine-inl.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/matching-based-engine.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/scoring.h
+        algorithms/loopclosure/matching-based-loopclosure/include/matching-based-loopclosure/train-vocabulary.h
+        algorithms/loopclosure/matching-based-loopclosure/src/detector-settings.cc
+        algorithms/loopclosure/matching-based-loopclosure/src/matching-based-engine.cc
+        algorithms/loopclosure/matching-based-loopclosure/src/train-vocabulary.cc
+        algorithms/loopclosure/matching-based-loopclosure/test/test_scoring.cc
+        algorithms/loopclosure/product-quantization/include/product-quantization/learn-product-quantization.h
+        algorithms/loopclosure/product-quantization/include/product-quantization/product-quantization.h
+        algorithms/loopclosure/product-quantization/src/learn-product-quantization.cc
+        algorithms/loopclosure/product-quantization/test/test_learn-product-quantization.cc
+        algorithms/loopclosure/product-quantization/test/test_product-quantization.cc
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/impl/hamming-inl.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/impl/simple-kmeans-inl.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/impl/tree-builder-inl.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/impl/vocabulary-tree-inl.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/distance.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/feature-allocator.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/hamming.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/helpers.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/mutable-tree.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/simple-kmeans.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/tree-builder.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/types.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/vocabulary-tree-maker.h
+        algorithms/loopclosure/vocabulary-tree/include/vocabulary-tree/vocabulary-tree.h
+        algorithms/loopclosure/vocabulary-tree/src/helpers.cc
+        algorithms/loopclosure/vocabulary-tree/src/vocabulary-tree-maker.cc
+        algorithms/loopclosure/vocabulary-tree/test/floating-point-test-helpers.h
+        algorithms/loopclosure/vocabulary-tree/test/test_accelerated-kmeans.cc
+        algorithms/loopclosure/vocabulary-tree/test/test_accelerated-quantization.cc
+        algorithms/loopclosure/vocabulary-tree/test/test_binary-descriptor.cc
+        algorithms/loopclosure/vocabulary-tree/test/test_binary-kmeans.cc
+        algorithms/loopclosure/vocabulary-tree/test/test_binary-tree-builder.cc
+        algorithms/loopclosure/vocabulary-tree/test/test_binary-tree-serialization.cc
+        algorithms/loopclosure/vocabulary-tree/test/test_bucketized-tree.cc
+        algorithms/map-anchoring/include/map-anchoring/map-anchoring.h
+        algorithms/map-anchoring/src/map-anchoring.cc
+        algorithms/map-optimization/include/map-optimization/augment-loopclosure.h
+        algorithms/map-optimization/include/map-optimization/callbacks.h
+        algorithms/map-optimization/include/map-optimization/mission-cluster-gauge-fixes-inl.h
+        algorithms/map-optimization/include/map-optimization/mission-cluster-gauge-fixes.h
+        algorithms/map-optimization/include/map-optimization/optimization-problem.h
+        algorithms/map-optimization/include/map-optimization/optimization-state-buffer.h
+        algorithms/map-optimization/include/map-optimization/optimization-state-fixing.h
+        algorithms/map-optimization/include/map-optimization/optimization-terms-addition.h
+        algorithms/map-optimization/include/map-optimization/outlier-rejection-solver.h
+        algorithms/map-optimization/include/map-optimization/solver-options.h
+        algorithms/map-optimization/include/map-optimization/solver.h
+        algorithms/map-optimization/include/map-optimization/vi-map-optimizer.h
+        algorithms/map-optimization/include/map-optimization/vi-map-relaxation.h
+        algorithms/map-optimization/include/map-optimization/vi-optimization-builder.h
+        algorithms/map-optimization/src/augment-loopclosure.cc
+        algorithms/map-optimization/src/optimization-problem.cc
+        algorithms/map-optimization/src/optimization-state-buffer.cc
+        algorithms/map-optimization/src/optimization-terms-addition.cc
+        algorithms/map-optimization/src/outlier-rejection-solver.cc
+        algorithms/map-optimization/src/solver-options.cc
+        algorithms/map-optimization/src/solver.cc
+        algorithms/map-optimization/src/vi-map-optimizer.cc
+        algorithms/map-optimization/src/vi-map-relaxation.cc
+        algorithms/map-optimization/src/vi-optimization-builder.cc
+        algorithms/map-optimization/test/test-optimization.cc
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/test/6dof-pose-graph-gen.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/test/6dof-test-trajectory-gen.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/test/6dof-vi-map-gen.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/test/vi-optimization-test-helpers.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/ba-optimization-options.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/double-window.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/graph-ba-optimizer.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/graph-iteration-callback.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/landmark-covariance-estimation.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/landmark-geometry-verification.h
+        algorithms/map-optimization-legacy/include/map-optimization-legacy/pose-prior-import.h
+        algorithms/map-optimization-legacy/src/test/6dof-pose-graph-gen.cc
+        algorithms/map-optimization-legacy/src/test/6dof-test-trajectory-gen.cc
+        algorithms/map-optimization-legacy/src/test/6dof-vi-map-gen.cc
+        algorithms/map-optimization-legacy/src/ba-optimization-options.cc
+        algorithms/map-optimization-legacy/src/double-window.cc
+        algorithms/map-optimization-legacy/src/graph-ba-optimizer.cc
+        algorithms/map-optimization-legacy/src/landmark-covariance-estimation.cc
+        algorithms/map-optimization-legacy/src/landmark-geometry-verification.cc
+        algorithms/map-optimization-legacy/src/pose-prior-import.cc
+        algorithms/map-optimization-legacy/test/test_4dof_visual_ba_test.cc
+        algorithms/map-optimization-legacy/test/test_6dof_ba_test.cc
+        algorithms/map-optimization-legacy/test/test_6dof_full_visual_ba_test.cc
+        algorithms/map-optimization-legacy/test/test_6dof_trajectory_test.cc
+        algorithms/map-optimization-legacy/test/test_basic_viwls_graph_test.cc
+        algorithms/map-optimization-legacy/test/test_landmark_association_test.cc
+        algorithms/map-optimization-legacy/test/test_landmark_delete_test.cc
+        algorithms/map-optimization-legacy/test/test_landmark_geometry_test.cc
+        algorithms/map-optimization-legacy/test/test_landmark_merge_test.cc
+        algorithms/map-optimization-legacy/test/test_mission_duplicate_test.cc
+        algorithms/map-optimization-legacy/test/test_mission_observer_count_test.cc
+        algorithms/map-optimization-legacy/test/test_optimizer_copy_test.cc
+        algorithms/map-optimization-legacy/test/test_remove_mission_test.cc
+        algorithms/map-optimization-legacy/test/test_remove_vertex_edge_test.cc
+        algorithms/map-optimization-legacy/test/test_vertex_getter_test.cc
+        algorithms/map-optimization-legacy/test/test_visual_ba_test.cc
+        algorithms/map-sparsification/include/map-sparsification/heuristic/cost-functions/min-keypoints-per-keyframe-cost.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/cost-functions/sampling-cost.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/scoring/descriptor-variance-scoring.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/scoring/observation-count-scoring.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/scoring/scoring-function.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/heuristic-sampling.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/no-sampling.h
+        algorithms/map-sparsification/include/map-sparsification/heuristic/random-sampling.h
+        algorithms/map-sparsification/include/map-sparsification/optimization/lp-solve-sparsification.h
+        algorithms/map-sparsification/include/map-sparsification/optimization/lprec-wrapper.h
+        algorithms/map-sparsification/include/map-sparsification/optimization/quadratic-term.h
+        algorithms/map-sparsification/include/map-sparsification/visualization/map-sparsification-visualization.h
+        algorithms/map-sparsification/include/map-sparsification/graph-partition-sampler.h
+        algorithms/map-sparsification/include/map-sparsification/keyframe-pruning.h
+        algorithms/map-sparsification/include/map-sparsification/landmark-sparsifier-base.h
+        algorithms/map-sparsification/include/map-sparsification/sampler-base.h
+        algorithms/map-sparsification/include/map-sparsification/sampler-factory.h
+        algorithms/map-sparsification/src/heuristic/heuristic-sampling.cc
+        algorithms/map-sparsification/src/heuristic/no-sampling.cc
+        algorithms/map-sparsification/src/heuristic/random-sampling.cc
+        algorithms/map-sparsification/src/optimization/lp-solve-sparsification.cc
+        algorithms/map-sparsification/src/optimization/quadratic-term.cc
+        algorithms/map-sparsification/src/visualization/map-sparsification-visualization.cc
+        algorithms/map-sparsification/src/graph-partition-sampler.cc
+        algorithms/map-sparsification/src/keyframe-pruning.cc
+        algorithms/map-sparsification/src/landmark-sparsifier-base.cc
+        algorithms/map-sparsification/src/sampler-base.cc
+        algorithms/map-sparsification/src/sampler-factory.cc
+        algorithms/map-sparsification/test/test_heuristic_landmark_sparsification.cc
+        algorithms/map-sparsification/test/test_lpsolve_api.cc
+        algorithms/map-sparsification/test/test_lpsolve_landmark_sparsification.cc
+        algorithms/online_map_builders/include/online-map-builders/keyframed-map-builder.h
+        algorithms/online_map_builders/include/online-map-builders/stream-map-builder.h
+        algorithms/online_map_builders/src/keyframed-map-builder.cc
+        algorithms/online_map_builders/src/stream-map-builder.cc
+        algorithms/simulation/include/mav_planning_utils/mav_state.h
+        algorithms/simulation/include/mav_planning_utils/motion4D.h
+        algorithms/simulation/include/mav_planning_utils/motion_defines.h
+        algorithms/simulation/include/mav_planning_utils/path_planning.h
+        algorithms/simulation/include/mav_planning_utils/path_serialization.h
+        algorithms/simulation/include/mav_planning_utils/polynomial.h
+        algorithms/simulation/include/mav_planning_utils/sincos.h
+        algorithms/simulation/include/mav_planning_utils/solvers.h
+        algorithms/simulation/include/simulation/eigen-visualization.h
+        algorithms/simulation/include/simulation/generic-path-generator-demo.h
+        algorithms/simulation/include/simulation/generic-path-generator.h
+        algorithms/simulation/include/simulation/visual-inertial-path-generator.h
+        algorithms/simulation/include/simulation/visual-nframe-simulator-channels.h
+        algorithms/simulation/include/simulation/visual-nframe-simulator.h
+        algorithms/simulation/src/generic-path-generator-demo.cc
+        algorithms/simulation/src/generic-path-generator.cc
+        algorithms/simulation/src/path_serialization.cc
+        algorithms/simulation/src/visual-inertial-path-generator.cc
+        algorithms/simulation/src/visual-nframe-simulator.cc
+        algorithms/simulation/test/test-gps-simulator.cc
+        algorithms/simulation/test/test-magnetometer-simulator.cc
+        algorithms/simulation/test/test-nframe-simulator.cc
+        algorithms/vi-map-helpers/include/vi-map-helpers/mission-clustering-coobservation.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/near-camera-pose-sampling.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/spatial-database-inl.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/spatial-database-vertex-id.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/spatial-database.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-descriptor-utils.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-geometry-inl.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-geometry.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-landmark-quality-evaluation.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-manipulation.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-nearest-neighbor-lookup-inl.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-nearest-neighbor-lookup.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-partitioner.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-queries-inl.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-queries.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-stats.h
+        algorithms/vi-map-helpers/include/vi-map-helpers/vi-map-vertex-time-queries.h
+        algorithms/vi-map-helpers/src/mission-clustering-coobservation.cc
+        algorithms/vi-map-helpers/src/near-camera-pose-sampling.cc
+        algorithms/vi-map-helpers/src/spatial-database-vertex-id.cc
+        algorithms/vi-map-helpers/src/vi-map-descriptor-utils.cc
+        algorithms/vi-map-helpers/src/vi-map-geometry.cc
+        algorithms/vi-map-helpers/src/vi-map-landmark-quality-evaluation.cc
+        algorithms/vi-map-helpers/src/vi-map-manipulation.cc
+        algorithms/vi-map-helpers/src/vi-map-nearest-neighbor-lookup.cc
+        algorithms/vi-map-helpers/src/vi-map-partitioner.cc
+        algorithms/vi-map-helpers/src/vi-map-queries.cc
+        algorithms/vi-map-helpers/src/vi-map-stats.cc
+        algorithms/vi-map-helpers/src/vi-map-vertex-time-queries.cc
+        algorithms/vi-map-helpers/test/test_map_geometry_test.cc
+        algorithms/vi-map-helpers/test/test_mission_clustering_coobservation.cc
+        algorithms/vi-map-helpers/test/test_mission_observer_clustering.cc
+        algorithms/vi-map-helpers/test/test_nearest_neighbor_lookup_test.cc
+        algorithms/vi-map-helpers/test/test_queries_vertex_getter.cc
+        algorithms/vi-map-helpers/test/test_spatial_database_test.cc
+        algorithms/vi-map-helpers/test/test_vertex_time_queries_test.cc
+        applications/maplab-console/include/maplab-console/maplab-console.h
+        applications/maplab-console/src/batch-runner.cc
+        applications/maplab-console/src/maplab-console-app.cc
+        applications/maplab-console/src/maplab-console.cc
+        applications/rovioli/app/rovioli-app.cc
+        applications/rovioli/include/rovioli/data-publisher-flow.h
+        applications/rovioli/include/rovioli/datasource-factory.h
+        applications/rovioli/include/rovioli/datasource-flow.h
+        applications/rovioli/include/rovioli/datasource-rosbag.h
+        applications/rovioli/include/rovioli/datasource-rostopic.h
+        applications/rovioli/include/rovioli/datasource.h
+        applications/rovioli/include/rovioli/feature-tracking-flow.h
+        applications/rovioli/include/rovioli/feature-tracking.h
+        applications/rovioli/include/rovioli/flow-topics.h
+        applications/rovioli/include/rovioli/imu-camera-synchronizer-flow.h
+        applications/rovioli/include/rovioli/imu-camera-synchronizer.h
+        applications/rovioli/include/rovioli/localizer-flow.h
+        applications/rovioli/include/rovioli/localizer.h
+        applications/rovioli/include/rovioli/map-builder-flow.h
+        applications/rovioli/include/rovioli/ros-helpers.h
+        applications/rovioli/include/rovioli/rovio-estimate.h
+        applications/rovioli/include/rovioli/rovio-factory.h
+        applications/rovioli/include/rovioli/rovio-flow.h
+        applications/rovioli/include/rovioli/rovioli-node.h
+        applications/rovioli/include/rovioli/synced-nframe-throttler-flow.h
+        applications/rovioli/include/rovioli/synced-nframe-throttler.h
+        applications/rovioli/include/rovioli/vi-map-with-mutex.h
+        applications/rovioli/include/rovioli/vio-update-builder.h
+        applications/rovioli/src/data-publisher-flow.cc
+        applications/rovioli/src/datasource-factory.cc
+        applications/rovioli/src/datasource-rosbag.cc
+        applications/rovioli/src/datasource-rostopic.cc
+        applications/rovioli/src/feature-tracking.cc
+        applications/rovioli/src/imu-camera-synchronizer.cc
+        applications/rovioli/src/localizer.cc
+        applications/rovioli/src/map-builder-flow.cc
+        applications/rovioli/src/rovio-factory.cc
+        applications/rovioli/src/rovio-flow.cc
+        applications/rovioli/src/rovioli-node.cc
+        applications/rovioli/src/synced-nframe-throttler.cc
+        applications/rovioli/src/vio-update-builder.cc
+        applications/rovioli/test/test-feature-tracking.cc
+        applications/rovioli/test/test-localizer.cc
+        applications/rovioli/test/test-vio-update-builder.cc
+        backend/map-manager/include/map-manager/test/test-map-type.h
+        backend/map-manager/include/map-manager/test/test-strings.h
+        backend/map-manager/include/map-manager/map-manager-inl.h
+        backend/map-manager/include/map-manager/map-manager.h
+        backend/map-manager/include/map-manager/map-storage-inl.h
+        backend/map-manager/include/map-manager/map-storage.h
+        backend/map-manager/src/dummy-src.cc
+        backend/map-manager/test/map-manager-basic-test.cc
+        backend/map-resources/include/map-resources/test/resource-template.h
+        backend/map-resources/include/map-resources/test/resources-test.h
+        backend/map-resources/include/map-resources/tinyply/tinyply.h
+        backend/map-resources/include/map-resources/optional-sensor-resources.h
+        backend/map-resources/include/map-resources/resource-cache-inl.h
+        backend/map-resources/include/map-resources/resource-cache.h
+        backend/map-resources/include/map-resources/resource-common.h
+        backend/map-resources/include/map-resources/resource-conversion-inl.h
+        backend/map-resources/include/map-resources/resource-conversion.h
+        backend/map-resources/include/map-resources/resource-loader-inl.h
+        backend/map-resources/include/map-resources/resource-loader.h
+        backend/map-resources/include/map-resources/resource-map-inl.h
+        backend/map-resources/include/map-resources/resource-map-serialization.h
+        backend/map-resources/include/map-resources/resource-map.h
+        backend/map-resources/include/map-resources/resource-typedefs.h
+        backend/map-resources/src/tinyply/tinyply.cc
+        backend/map-resources/src/resource-cache.cc
+        backend/map-resources/src/resource-common.cc
+        backend/map-resources/src/resource-conversion.cc
+        backend/map-resources/src/resource-loader.cc
+        backend/map-resources/src/resource-map-serialization.cc
+        backend/map-resources/src/resource-map.cc
+        backend/map-resources/test/test_optional_sensor_resources.cc
+        backend/map-resources/test/test_resource_conversion.cc
+        backend/map-resources/test/test_resource_loader.cc
+        backend/map-resources/test/test_resource_map.cc
+        common/aslam-serialization/include/aslam-serialization/camera-serialization.h
+        common/aslam-serialization/include/aslam-serialization/visual-frame-serialization.h
+        common/aslam-serialization/src/camera-serialization.cc
+        common/aslam-serialization/src/visual-frame-serialization.cc
+        common/aslam-serialization/test/test-camera-serialization.cc
+        common/aslam-serialization/test/test-visual-frame-serialization.cc
+        common/console-common/include/console-common/basic-console-plugin.h
+        common/console-common/include/console-common/command-registerer.h
+        common/console-common/include/console-common/console-plugin-base-with-plotter.h
+        common/console-common/include/console-common/console-plugin-base.h
+        common/console-common/include/console-common/console.h
+        common/console-common/src/basic-console-plugin.cc
+        common/console-common/src/command-registerer.cc
+        common/console-common/src/console-plugin-base.cc
+        common/console-common/src/console.cc
+        common/dense-reconstruction-common/include/dense-reconstruction/conversion-tools.h
+        common/dense-reconstruction-common/include/dense-reconstruction/resource-utils.h
+        common/dense-reconstruction-common/src/conversion-tools.cc
+        common/dense-reconstruction-common/src/resource-utils.cc
+        common/maplab-common/include/maplab-common/internal/discrete-low-pass-filter-inl.h
+        common/maplab-common/include/maplab-common/internal/hysteresis-inl.h
+        common/maplab-common/include/maplab-common/internal/unique-id.h
+        common/maplab-common/include/maplab-common/test/serialization-macros.h
+        common/maplab-common/include/maplab-common/test/testing-entrypoint.h
+        common/maplab-common/include/maplab-common/test/testing-predicates.h
+        common/maplab-common/include/maplab-common/accessors.h
+        common/maplab-common/include/maplab-common/aslam-id-proto.h
+        common/maplab-common/include/maplab-common/backtrace.h
+        common/maplab-common/include/maplab-common/binary-serialization.h
+        common/maplab-common/include/maplab-common/breakpoints.h
+        common/maplab-common/include/maplab-common/capture-std-output.h
+        common/maplab-common/include/maplab-common/combinatorial.h
+        common/maplab-common/include/maplab-common/condition.h
+        common/maplab-common/include/maplab-common/constants.h
+        common/maplab-common/include/maplab-common/conversions.h
+        common/maplab-common/include/maplab-common/cubic-spline.h
+        common/maplab-common/include/maplab-common/delayed-notification.h
+        common/maplab-common/include/maplab-common/discrete-low-pass-filter.h
+        common/maplab-common/include/maplab-common/eigen-proto-inl.h
+        common/maplab-common/include/maplab-common/eigen-proto.h
+        common/maplab-common/include/maplab-common/eigen-yaml-serialization.h
+        common/maplab-common/include/maplab-common/feature-descriptor-ref.h
+        common/maplab-common/include/maplab-common/file-lock.h
+        common/maplab-common/include/maplab-common/file-logger-inl.h
+        common/maplab-common/include/maplab-common/file-logger.h
+        common/maplab-common/include/maplab-common/file-serializable.h
+        common/maplab-common/include/maplab-common/file-system-tools.h
+        common/maplab-common/include/maplab-common/fixed-size-queue.h
+        common/maplab-common/include/maplab-common/frequency-enforcer.h
+        common/maplab-common/include/maplab-common/geometry-inl.h
+        common/maplab-common/include/maplab-common/geometry.h
+        common/maplab-common/include/maplab-common/global-coordinate-tools.h
+        common/maplab-common/include/maplab-common/glog-helpers.h
+        common/maplab-common/include/maplab-common/gnuplot-interface-inl.h
+        common/maplab-common/include/maplab-common/gnuplot-interface.h
+        common/maplab-common/include/maplab-common/gravity-provider.h
+        common/maplab-common/include/maplab-common/histograms-inl.h
+        common/maplab-common/include/maplab-common/histograms.h
+        common/maplab-common/include/maplab-common/hysteresis.h
+        common/maplab-common/include/maplab-common/interpolation-helpers.h
+        common/maplab-common/include/maplab-common/kruskal-max-span-tree.h
+        common/maplab-common/include/maplab-common/macros.h
+        common/maplab-common/include/maplab-common/map-manager-config.h
+        common/maplab-common/include/maplab-common/map-traits.h
+        common/maplab-common/include/maplab-common/monitor.h
+        common/maplab-common/include/maplab-common/multi-threaded-progress-bar.h
+        common/maplab-common/include/maplab-common/network-common.h
+        common/maplab-common/include/maplab-common/ordered-monitors.h
+        common/maplab-common/include/maplab-common/parallel-process.h
+        common/maplab-common/include/maplab-common/pose_types.h
+        common/maplab-common/include/maplab-common/progress-bar.h
+        common/maplab-common/include/maplab-common/proto-helpers.h
+        common/maplab-common/include/maplab-common/proto-serialization-helper.h
+        common/maplab-common/include/maplab-common/python-interface.h
+        common/maplab-common/include/maplab-common/quaternion-math-inl.h
+        common/maplab-common/include/maplab-common/quaternion-math.h
+        common/maplab-common/include/maplab-common/readable-serialization-inl.h
+        common/maplab-common/include/maplab-common/readable-serialization.h
+        common/maplab-common/include/maplab-common/sigint-breaker.h
+        common/maplab-common/include/maplab-common/string-tools.h
+        common/maplab-common/include/maplab-common/stringprintf.h
+        common/maplab-common/include/maplab-common/stupid-warnings-disable.h
+        common/maplab-common/include/maplab-common/stupid-warnings-reenable.h
+        common/maplab-common/include/maplab-common/temporal-buffer-inl.h
+        common/maplab-common/include/maplab-common/temporal-buffer.h
+        common/maplab-common/include/maplab-common/text-formatting.h
+        common/maplab-common/include/maplab-common/threaded-task-queue-processor.h
+        common/maplab-common/include/maplab-common/threading-helpers.h
+        common/maplab-common/include/maplab-common/threadsafe-queue.h
+        common/maplab-common/include/maplab-common/timeout-counter.h
+        common/maplab-common/include/maplab-common/traits.h
+        common/maplab-common/include/maplab-common/tridiagonal-matrix.h
+        common/maplab-common/include/maplab-common/ui-utility.h
+        common/maplab-common/include/maplab-common/unique-id.h
+        common/maplab-common/include/maplab-common/vector-window-operations.h
+        common/maplab-common/include/maplab-common/yaml-file-serializable.h
+        common/maplab-common/include/maplab-common/yaml-serialization.h
+        common/maplab-common/src/test/testing-entrypoint.cc
+        common/maplab-common/src/binary-serialization.cc
+        common/maplab-common/src/breakpoints.cc
+        common/maplab-common/src/combinatorial.cc
+        common/maplab-common/src/condition.cc
+        common/maplab-common/src/cubic-spline.cc
+        common/maplab-common/src/delayed-notification.cc
+        common/maplab-common/src/feature-descriptor-ref.cc
+        common/maplab-common/src/file-lock.cc
+        common/maplab-common/src/file-logger.cc
+        common/maplab-common/src/file-system-tools.cc
+        common/maplab-common/src/geometry.cc
+        common/maplab-common/src/global-coordinate-tools.cc
+        common/maplab-common/src/gnuplot-interface.cc
+        common/maplab-common/src/gravity-provider.cc
+        common/maplab-common/src/histograms.cc
+        common/maplab-common/src/multi-threaded-progress-bar.cc
+        common/maplab-common/src/progress-bar.cc
+        common/maplab-common/src/proto-serialization-helper.cc
+        common/maplab-common/src/python-interface.cc
+        common/maplab-common/src/shared-gflags.cc
+        common/maplab-common/src/sigint-breaker.cc
+        common/maplab-common/src/stringprintf.cc
+        common/maplab-common/src/threading-helpers.cc
+        common/maplab-common/src/tridiagonal-matrix.cc
+        common/maplab-common/src/unique-id.cc
+        common/maplab-common/test/test-interpolation-helpers.cc
+        common/maplab-common/test/test-quaternion-math.cc
+        common/maplab-common/test/test-threaded-task-queue-processor.cc
+        common/maplab-common/test/test-timeout-counter.cc
+        common/maplab-common/test/test_accessors.cc
+        common/maplab-common/test/test_combinatorial.cc
+        common/maplab-common/test/test_delayed_notification.cc
+        common/maplab-common/test/test_eigen_proto_test.cc
+        common/maplab-common/test/test_eigen_yaml_serialization.cc
+        common/maplab-common/test/test_feature-descriptor-ref.cc
+        common/maplab-common/test/test_file_lock.cc
+        common/maplab-common/test/test_file_logger.cc
+        common/maplab-common/test/test_file_system_tools.cc
+        common/maplab-common/test/test_fixed_size_queue.cc
+        common/maplab-common/test/test_geometry.cc
+        common/maplab-common/test/test_global-coordinate-tools.cc
+        common/maplab-common/test/test_kruskal_max_span_tree.cc
+        common/maplab-common/test/test_monitor.cc
+        common/maplab-common/test/test_multi_threaded_progress_bar.cc
+        common/maplab-common/test/test_ordered_monitors.cc
+        common/maplab-common/test/test_parallel_process.cc
+        common/maplab-common/test/test_progress_bar.cc
+        common/maplab-common/test/test_python_interface.cc
+        common/maplab-common/test/test_stl_yaml_serialization.cc
+        common/maplab-common/test/test_string_tools.cc
+        common/maplab-common/test/test_temporal_buffer.cc
+        common/maplab-common/test/test_threadsafe_queue.cc
+        common/maplab-common/test/test_vector-window-operations.cc
+        common/message_flow/include/message-flow/callback-types.h
+        common/message_flow/include/message-flow/message-delivery-queue.h
+        common/message_flow/include/message-flow/message-dispatcher-fifo.h
+        common/message_flow/include/message-flow/message-dispatcher.h
+        common/message_flow/include/message-flow/message-flow-inl.h
+        common/message_flow/include/message-flow/message-flow.h
+        common/message_flow/include/message-flow/message-topic-registration.h
+        common/message_flow/include/message-flow/publisher.h
+        common/message_flow/include/message-flow/subscriber-list.h
+        common/message_flow/include/message-flow/subscriber-network.h
+        common/message_flow/src/message-flow.cc
+        common/message_flow/test/test-message-flow.cc
+        common/vio-common/include/vio-common/internal/imu-measurements-buffer-inl.h
+        common/vio-common/include/vio-common/internal/vio-types-inl.h
+        common/vio-common/include/vio-common/test/vio-update-simulation.h
+        common/vio-common/include/vio-common/imu-measurements-buffer.h
+        common/vio-common/include/vio-common/rostopic-settings.h
+        common/vio-common/include/vio-common/vio-types.h
+        common/vio-common/include/vio-common/vio-update-serialization.h
+        common/vio-common/include/vio-common/vio-update.h
+        common/vio-common/src/test/vio-update-simulation.cc
+        common/vio-common/src/imu-measurements-buffer.cc
+        common/vio-common/src/rostopic-settings.cc
+        common/vio-common/src/vio-update-serialization.cc
+        common/vio-common/test/test-imu-measurements-buffer.cc
+        common/vio-common/test/test-vio-update-serialization.cc
+        console-plugins/dense-reconstruction-plugin/include/dense-reconstruction/dense-reconstruction-plugin.h
+        console-plugins/dense-reconstruction-plugin/src/dense-reconstruction-plugin.cc
+        console-plugins/landmark-manipulation-plugin/include/landmark-manipulation-plugin/landmark-manipulation-plugin.h
+        console-plugins/landmark-manipulation-plugin/src/landmark-manipulation-plugin.cc
+        console-plugins/loop-closure-plugin/include/loop-closure-plugin/loop-closure-plugin.h
+        console-plugins/loop-closure-plugin/include/loop-closure-plugin/loop-detector-serialization.h
+        console-plugins/loop-closure-plugin/include/loop-closure-plugin/vi-localization-evaluator.h
+        console-plugins/loop-closure-plugin/include/loop-closure-plugin/vi-map-merger.h
+        console-plugins/loop-closure-plugin/src/loop-closure-plugin.cc
+        console-plugins/loop-closure-plugin/src/loop-detector-serialization.cc
+        console-plugins/loop-closure-plugin/src/vi-localization-evaluator.cc
+        console-plugins/loop-closure-plugin/src/vi-map-merger.cc
+        console-plugins/loop-closure-plugin/test/test-loopclosure.cc
+        console-plugins/map-anchoring-plugin/include/map-anchoring-plugin/anchoring-plugin.h
+        console-plugins/map-anchoring-plugin/src/anchoring-plugin.cc
+        console-plugins/map-optimization-legacy-plugin/include/map-optimization-legacy-plugin/legacy-optimizer-plugin.h
+        console-plugins/map-optimization-legacy-plugin/include/map-optimization-legacy-plugin/vi-map-optimizer-legacy.h
+        console-plugins/map-optimization-legacy-plugin/src/legacy-optimizer-plugin.cc
+        console-plugins/map-optimization-legacy-plugin/src/vi-map-optimizer-legacy.cc
+        console-plugins/map-optimization-legacy-plugin/test/test-optimization.cc
+        console-plugins/map-optimization-plugin/include/map-optimization-plugin/optimizer-plugin.h
+        console-plugins/map-optimization-plugin/src/optimizer-plugin.cc
+        console-plugins/map-sparsification-plugin/include/map-sparsification-plugin/keyframe-pruning.h
+        console-plugins/map-sparsification-plugin/include/map-sparsification-plugin/landmark-sparsification.h
+        console-plugins/map-sparsification-plugin/include/map-sparsification-plugin/map-sparsification-plugin.h
+        console-plugins/map-sparsification-plugin/src/keyframe-pruning.cc
+        console-plugins/map-sparsification-plugin/src/landmark-sparsification.cc
+        console-plugins/map-sparsification-plugin/src/map-sparsification-plugin.cc
+        console-plugins/mapping-workflows-plugin/include/mapping-workflows-plugin/localization-map-creation.h
+        console-plugins/mapping-workflows-plugin/include/mapping-workflows-plugin/mapping-workflows-plugin.h
+        console-plugins/mapping-workflows-plugin/src/localization-map-creation.cc
+        console-plugins/mapping-workflows-plugin/src/mapping-workflows-plugin.cc
+        console-plugins/pose-graph-manipulation-plugin/include/pose-graph-manipulation-plugin/edge-manipulation.h
+        console-plugins/pose-graph-manipulation-plugin/include/pose-graph-manipulation-plugin/pose-graph-manipulation-plugin.h
+        console-plugins/pose-graph-manipulation-plugin/include/pose-graph-manipulation-plugin/reset-wheel-odometry.h
+        console-plugins/pose-graph-manipulation-plugin/src/edge-manipulation.cc
+        console-plugins/pose-graph-manipulation-plugin/src/pose-graph-manipulation-plugin.cc
+        console-plugins/pose-graph-manipulation-plugin/src/reset-wheel-odometry.cc
+        console-plugins/statistics-plugin/include/statistics-plugin/statistics-plugin.h
+        console-plugins/statistics-plugin/src/statistics-plugin.cc
+        console-plugins/vi-map-basic-plugin/include/vi-map-basic-plugin/vi-map-basic-plugin.h
+        console-plugins/vi-map-basic-plugin/src/vi-map-basic-plugin.cc
+        console-plugins/vi-map-basic-plugin/test/map-manager-file-io-test.cc
+        console-plugins/vi-map-basic-plugin/test/map-manager-vi-map-test.cc
+        console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin/data-import-export-plugin.h
+        console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin/export-ncamera-calibration.h
+        console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin/export-sensors.h
+        console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin/export-vertex-data.h
+        console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin/import-export-gps-data-inl.h
+        console-plugins/vi-map-data-import-export-plugin/include/vi-map-data-import-export-plugin/import-export-gps-data.h
+        console-plugins/vi-map-data-import-export-plugin/src/data-import-export-plugin.cc
+        console-plugins/vi-map-data-import-export-plugin/src/export-ncamera-calibration.cc
+        console-plugins/vi-map-data-import-export-plugin/src/export-sensors.cc
+        console-plugins/vi-map-data-import-export-plugin/src/export-vertex-data.cc
+        console-plugins/vi-map-data-import-export-plugin/src/import-export-gps-data.cc
+        console-plugins/vi-map-summarization-plugin/include/vi-map-summarization-plugin/summarization-plugin.h
+        console-plugins/vi-map-summarization-plugin/src/summarization-plugin.cc
+        console-plugins/vi-map-visualization-plugin/include/vi-map-visualization-plugin/visualization-plugin.h
+        console-plugins/vi-map-visualization-plugin/src/visualization-plugin.cc
+        interfaces/pmvs_interface/include/dense-reconstruction/pmvs-common.h
+        interfaces/pmvs_interface/include/dense-reconstruction/pmvs-config.h
+        interfaces/pmvs_interface/include/dense-reconstruction/pmvs-file-utils.h
+        interfaces/pmvs_interface/include/dense-reconstruction/pmvs-interface.h
+        interfaces/pmvs_interface/src/pmvs-common.cc
+        interfaces/pmvs_interface/src/pmvs-config.cc
+        interfaces/pmvs_interface/src/pmvs-file-utils.cc
+        interfaces/pmvs_interface/src/pmvs-interface.cc
+        interfaces/pmvs_interface/test/test_pmvs_interface.cc
+        interfaces/voxblox_interface/include/voxblox-interface/integration.h
+        interfaces/voxblox_interface/src/integration.cc
+        interfaces/voxblox_interface/test/test-voxblox-interface.cc
+        map-structure/localization-summary-map/include/localization-summary-map/localization-summary-map-cache.h
+        map-structure/localization-summary-map/include/localization-summary-map/localization-summary-map-creation.h
+        map-structure/localization-summary-map/include/localization-summary-map/localization-summary-map.h
+        map-structure/localization-summary-map/include/localization-summary-map/unique-id.h
+        map-structure/localization-summary-map/src/localization-summary-map-creation.cc
+        map-structure/localization-summary-map/src/localization-summary-map.cc
+        map-structure/localization-summary-map/test/test_localization_summary_map_protobuf_test.cc
+        map-structure/localization-summary-map/test/test_localization_summary_map_test.cc
+        map-structure/posegraph/include/posegraph/example/edge.h
+        map-structure/posegraph/include/posegraph/example/pose-graph.h
+        map-structure/posegraph/include/posegraph/example/vertex.h
+        map-structure/posegraph/include/posegraph/edge.h
+        map-structure/posegraph/include/posegraph/pose-graph-inl.h
+        map-structure/posegraph/include/posegraph/pose-graph.h
+        map-structure/posegraph/include/posegraph/unique-id.h
+        map-structure/posegraph/include/posegraph/vertex.h
+        map-structure/posegraph/src/example/edge.cc
+        map-structure/posegraph/src/example/pose-graph.cc
+        map-structure/posegraph/src/example/vertex.cc
+        map-structure/posegraph/src/edge.cc
+        map-structure/posegraph/src/pose-graph.cc
+        map-structure/posegraph/src/vertex.cc
+        map-structure/posegraph/test/test_id_test.cc
+        map-structure/posegraph/test/test_posegraph.cc
+        map-structure/posegraph/test/test_posegraph_error_handling_test.cc
+        map-structure/sensors/include/sensors/gps-utm.h
+        map-structure/sensors/include/sensors/gps-wgs.h
+        map-structure/sensors/include/sensors/imu.h
+        map-structure/sensors/include/sensors/measurement.h
+        map-structure/sensors/include/sensors/relative-6dof-pose.h
+        map-structure/sensors/include/sensors/sensor-extrinsics.h
+        map-structure/sensors/include/sensors/sensor-factory.h
+        map-structure/sensors/include/sensors/sensor-system.h
+        map-structure/sensors/include/sensors/sensor.h
+        map-structure/sensors/src/gps-utm.cc
+        map-structure/sensors/src/gps-wgs.cc
+        map-structure/sensors/src/imu.cc
+        map-structure/sensors/src/measurement.cc
+        map-structure/sensors/src/relative-6dof-pose.cc
+        map-structure/sensors/src/sensor-extrinsics.cc
+        map-structure/sensors/src/sensor-factory.cc
+        map-structure/sensors/src/sensor-system.cc
+        map-structure/sensors/src/sensor.cc
+        map-structure/sensors/test/test-measurements.cc
+        map-structure/sensors/test/test-sensor-serialization.cc
+        map-structure/sensors/test/test-sensor-system.cc
+        map-structure/sensors/test/test-sensors.cc
+        map-structure/vi-map/include/vi-map/deprecated/gps-data-storage-inl.h
+        map-structure/vi-map/include/vi-map/deprecated/gps-data-storage.h
+        map-structure/vi-map/include/vi-map/deprecated/optional-sensor-extrinsics.h
+        map-structure/vi-map/include/vi-map/deprecated/vi-map-serialization-deprecated.h
+        map-structure/vi-map/include/vi-map/test/vi-map-generator.h
+        map-structure/vi-map/include/vi-map/test/vi-map-test-helpers.h
+        map-structure/vi-map/include/vi-map/check-map-consistency.h
+        map-structure/vi-map/include/vi-map/cklam-edge.h
+        map-structure/vi-map/include/vi-map/edge.h
+        map-structure/vi-map/include/vi-map/landmark-index.h
+        map-structure/vi-map/include/vi-map/landmark-quality-metrics-inl.h
+        map-structure/vi-map/include/vi-map/landmark-quality-metrics.h
+        map-structure/vi-map/include/vi-map/landmark-store.h
+        map-structure/vi-map/include/vi-map/landmark.h
+        map-structure/vi-map/include/vi-map/laser-edge.h
+        map-structure/vi-map/include/vi-map/loop-constraint.h
+        map-structure/vi-map/include/vi-map/loopclosure-edge.h
+        map-structure/vi-map/include/vi-map/macros.h
+        map-structure/vi-map/include/vi-map/mission-baseframe.h
+        map-structure/vi-map/include/vi-map/mission.h
+        map-structure/vi-map/include/vi-map/optional-sensor-data.h
+        map-structure/vi-map/include/vi-map/pose-graph.h
+        map-structure/vi-map/include/vi-map/semantics-manager.h
+        map-structure/vi-map/include/vi-map/sensor-manager-inl.h
+        map-structure/vi-map/include/vi-map/sensor-manager.h
+        map-structure/vi-map/include/vi-map/structure-loopclosure-edge.h
+        map-structure/vi-map/include/vi-map/trajectory-edge.h
+        map-structure/vi-map/include/vi-map/transformation-edge.h
+        map-structure/vi-map/include/vi-map/unique-id.h
+        map-structure/vi-map/include/vi-map/vertex-inl.h
+        map-structure/vi-map/include/vi-map/vertex.h
+        map-structure/vi-map/include/vi-map/vi-map-inl.h
+        map-structure/vi-map/include/vi-map/vi-map-nabo.h
+        map-structure/vi-map/include/vi-map/vi-map-serialization.h
+        map-structure/vi-map/include/vi-map/vi-map.h
+        map-structure/vi-map/include/vi-map/vi-mission.h
+        map-structure/vi-map/include/vi-map/viwls-edge.h
+        map-structure/vi-map/src/test/vi-map-generator.cc
+        map-structure/vi-map/src/test/vi-map-test-helpers.cc
+        map-structure/vi-map/src/check-map-consistency.cc
+        map-structure/vi-map/src/cklam-edge.cc
+        map-structure/vi-map/src/edge.cc
+        map-structure/vi-map/src/gps-data-storage.cc
+        map-structure/vi-map/src/imu-sigmas.cc
+        map-structure/vi-map/src/landmark-quality-metrics.cc
+        map-structure/vi-map/src/landmark-store.cc
+        map-structure/vi-map/src/landmark-to-vertex-ref.cc
+        map-structure/vi-map/src/landmark.cc
+        map-structure/vi-map/src/laser-edge.cc
+        map-structure/vi-map/src/loopclosure-edge.cc
+        map-structure/vi-map/src/mission-baseframe.cc
+        map-structure/vi-map/src/mission.cc
+        map-structure/vi-map/src/optional-sensor-data.cc
+        map-structure/vi-map/src/optional-sensor-extrinsics.cc
+        map-structure/vi-map/src/pose-graph.cc
+        map-structure/vi-map/src/semantics-manager.cc
+        map-structure/vi-map/src/sensor-manager-serialization.cc
+        map-structure/vi-map/src/sensor-manager.cc
+        map-structure/vi-map/src/structure-loopclosure-edge.cc
+        map-structure/vi-map/src/trajectory-edge.cc
+        map-structure/vi-map/src/transformation-edge.cc
+        map-structure/vi-map/src/vertex.cc
+        map-structure/vi-map/src/vi-map-serialization-deprecated.cc
+        map-structure/vi-map/src/vi-map-serialization.cc
+        map-structure/vi-map/src/vi-map.cc
+        map-structure/vi-map/src/vi-mission.cc
+        map-structure/vi-map/src/viwls-edge.cc
+        map-structure/vi-map/test/test-mission-selection.cc
+        map-structure/vi-map/test/test-sensor-manager-serialization.cc
+        map-structure/vi-map/test/test-serialization.cc
+        map-structure/vi-map/test/test_edge_removal.cc
+        map-structure/vi-map/test/test_edge_serialization.cc
+        map-structure/vi-map/test/test_landmark.cc
+        map-structure/vi-map/test/test_map_consistency_check.cc
+        map-structure/vi-map/test/test_map_get_vertex_ids_in_mission_test.cc
+        map-structure/vi-map/test/test_merge_map.cc
+        map-structure/vi-map/test/test_pmvs_resources_test.cc
+        map-structure/vi-map/test/test_semantics_manager_test.cc
+        map-structure/vi-map/test/test_spatial_database_test.cc
+        map-structure/vi-map/test/test_summary_landmark_accessors_test.cc
+        map-structure/vi-map/test/test_vertex_resources_test.cc
+        map-structure/vi-map/test/test_vi_baseframe_protobuf_test.cc
+        map-structure/vi-map/test/test_vi_mission_optional_camera_resources.cc
+        map-structure/vi-map/test/test_vi_mission_protobuf_test.cc
+        map-structure/vi-map/test/test_viwls_vertex_protobuf_test.cc
+        test/vi-mapping-test-app/include/vi-mapping-test-app/vi-mapping-test-app.h
+        test/vi-mapping-test-app/src/vi-mapping-test-app.cc
+        tools/csv-export/include/csv-export/csv-export.h
+        tools/csv-export/src/csv-export.cc
+        visualization/include/visualization/internal/viz-channel.h
+        visualization/include/visualization/internal/viz-data-collector-inl.h
+        visualization/include/visualization/color-palette.h
+        visualization/include/visualization/color.h
+        visualization/include/visualization/common-rviz-visualization.h
+        visualization/include/visualization/constant-velocity-smoother.h
+        visualization/include/visualization/debug-visualizer.h
+        visualization/include/visualization/eigen-visualization.h
+        visualization/include/visualization/feature-matches-visualization-inl.h
+        visualization/include/visualization/feature-matches-visualization.h
+        visualization/include/visualization/patch-based-visualization.h
+        visualization/include/visualization/rviz-visualization-sink-inl.h
+        visualization/include/visualization/rviz-visualization-sink.h
+        visualization/include/visualization/sequential-plotter.h
+        visualization/include/visualization/sliding-window-plotter.h
+        visualization/include/visualization/vertex-landmark-visibility-plotter.h
+        visualization/include/visualization/visualizer.h
+        visualization/include/visualization/viwls-graph-plotter.h
+        visualization/include/visualization/viz-data-collector.h
+        visualization/include/visualization/viz-primitives.h
+        visualization/src/color-palette.cc
+        visualization/src/common-rviz-visualization.cc
+        visualization/src/constant-velocity-smoother.cc
+        visualization/src/debug-visualizer.cc
+        visualization/src/feature-matches-visualization.cc
+        visualization/src/patch-based-visualization.cc
+        visualization/src/rviz-visualization-sink.cc
+        visualization/src/sequential-plotter.cc
+        visualization/src/sliding-window-plotter.cc
+        visualization/src/vertex-landmark-visibility-plotter.cc
+        visualization/src/visualizer.cc
+        visualization/src/viwls-graph-plotter.cc
+        visualization/src/viz-data-collector.cc
+        visualization/test/test-viz-channels.cc
+        visualization/test/test-viz-data-collector.cc)

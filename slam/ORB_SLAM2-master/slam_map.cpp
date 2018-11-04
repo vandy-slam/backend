@@ -167,6 +167,7 @@ BOOST_PYTHON_MODULE(slam_map)
                         .def(init<>())
                         .def("test", &SLAMMap::test)
                         .def("get_pts", &SLAMMap::get_points)
+                        .def("check", &SLAMMap::check)
                 ;
 
         }

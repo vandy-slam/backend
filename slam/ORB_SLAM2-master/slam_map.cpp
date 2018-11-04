@@ -122,16 +122,17 @@ struct SLAMMap
         }
     }
 
-    vector<vector<double>> get_points() {
-        vector<vector<double>> pts;
-        for (auto const &map_pt : SLAM->GetTrackedMapPoints()) {
-            vector<double> pt ;
-            for (int coord = 0; coord < 3; coord++) {
-                pt.push_back(map_pt->GetWorldPos().at(coord, 0));
-            }
-            pts.push_back(pt);
-        }
-        return pts;
+    vector<MapPoint*> get_points() {
+//        vector<vector<double>> pts;
+//        for (auto const &map_pt : SLAM->GetTrackedMapPoints()) {
+//            vector<double> pt ;
+//            for (int coord = 0; coord < 3; coord++) {
+//                pt.push_back(map_pt->GetWorldPos().at(coord, 0));
+//            }
+//            pts.push_back(pt);
+//        }
+//        return pts;
+        return SLAM->GetTrackedMapPoints();
     }
 
     void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {

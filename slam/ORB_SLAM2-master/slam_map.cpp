@@ -106,6 +106,7 @@ struct SLAMMap
             if(ttrack<T)
                 usleep((T-ttrack)*1e6);
         }
+        cout << "done initing\n";
     }
 
     void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {

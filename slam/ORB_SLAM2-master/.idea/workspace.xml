@@ -18,9 +18,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="241af568-9e18-4da2-a16b-05db45c89ce0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/System.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/System.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/slam_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/slam_map.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cc" value="154" />
-          <entry key="cpp" value="1015" />
+          <entry key="cpp" value="1041" />
           <entry key="h" value="71" />
           <entry key="py" value="58" />
           <entry key="sh" value="20" />
@@ -73,7 +71,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="193" />
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="1239" />
+          <entry key="ObjectiveC" value="1265" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="Python" value="58" />
         </counts>
@@ -82,11 +80,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slam_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1366">
-              <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
+            <state relative-caret-position="407">
+              <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -142,11 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="1423" column="32" selection-start-line="1423" selection-start-column="32" selection-end-line="1423" selection-end-column="32" />
+            <state relative-caret-position="206">
+              <caret line="1413" lean-forward="true" selection-start-line="1413" selection-end-line="1413" />
             </state>
           </provider>
         </entry>
@@ -203,10 +201,10 @@
         <option value="$PROJECT_DIR$/Examples/Monocular/slam_map.cpp" />
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/slam_map.cpp" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/src/System.cc" />
         <option value="$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h" />
+        <option value="$PROJECT_DIR$/slam_map.cpp" />
       </list>
     </option>
   </component>
@@ -341,12 +339,12 @@
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
       <workItem from="1541275102817" duration="4453000" />
-      <workItem from="1541311402374" duration="991000" />
+      <workItem from="1541311402374" duration="1046000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5459000" />
+    <option name="totallyTimeSpent" value="5514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="298" y="27" width="977" height="967" extended-state="0" />
@@ -384,7 +382,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/slam_map.cpp</url>
-          <line>162</line>
+          <line>163</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -454,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/slam_map.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1366">
-          <caret line="46" column="53" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/MapPoint.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -504,8 +495,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="1423" column="32" selection-start-line="1423" selection-start-column="32" selection-end-line="1423" selection-end-column="32" />
+        <state relative-caret-position="206">
+          <caret line="1413" lean-forward="true" selection-start-line="1413" selection-end-line="1413" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slam_map.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="108" column="33" selection-start-line="108" selection-start-column="33" selection-end-line="108" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -130,7 +130,6 @@ struct SLAMMap
             for (int coord = 0; coord < 3; coord++) {
                 pt.push_back(map_pts.at(i).GetWorldPos().at(coord));
             }
-            cout << pt << endl;
             pts.push_back(pt);
         }
         return pts;

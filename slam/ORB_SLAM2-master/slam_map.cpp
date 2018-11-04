@@ -122,7 +122,7 @@ struct SLAMMap
         }
     }
 
-    vector<MapPoint*> get_points() {
+    vector<ORB_SLAM2::MapPoint*> get_points() {
 //        vector<vector<double>> pts;
 //        for (auto const &map_pt : SLAM->GetTrackedMapPoints()) {
 //            vector<double> pt ;

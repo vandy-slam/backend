@@ -19,6 +19,7 @@
   <component name="ChangeListManager">
     <list default="true" id="241af568-9e18-4da2-a16b-05db45c89ce0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/slam_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/slam_map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/System.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/System.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cc" value="154" />
-          <entry key="cpp" value="1277" />
+          <entry key="cpp" value="1333" />
           <entry key="h" value="71" />
           <entry key="py" value="99" />
           <entry key="sh" value="20" />
@@ -71,7 +72,7 @@
         <counts>
           <entry key="CMakeLists.txt" value="193" />
           <entry key="Doxygen file" value="1" />
-          <entry key="ObjectiveC" value="1501" />
+          <entry key="ObjectiveC" value="1557" />
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="Python" value="99" />
         </counts>
@@ -83,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/slam_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            <state relative-caret-position="118">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -92,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Examples/Monocular/mono_tum.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
+            <state relative-caret-position="-636">
               <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
               <folding>
                 <element signature="e#829#847#0" expanded="true" />
@@ -104,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/System.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+            <state relative-caret-position="250">
+              <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -183,9 +184,9 @@
         <option value="$PROJECT_DIR$/Examples/Monocular/slam_map.cpp" />
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/System.cc" />
         <option value="$PROJECT_DIR$/Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/src/System.cc" />
         <option value="$PROJECT_DIR$/slam_map.cpp" />
       </list>
     </option>
@@ -321,12 +322,12 @@
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
       <workItem from="1541275102817" duration="4453000" />
-      <workItem from="1541311402374" duration="1789000" />
+      <workItem from="1541311402374" duration="2109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6257000" />
+    <option name="totallyTimeSpent" value="6577000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="298" y="27" width="977" height="967" extended-state="0" />
@@ -364,7 +365,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/slam_map.cpp</url>
-          <line>171</line>
+          <line>169</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -462,13 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/System.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/MapPoint.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -479,9 +473,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/System.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Examples/Monocular/mono_tum.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
+        <state relative-caret-position="-636">
           <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
           <folding>
             <element signature="e#829#847#0" expanded="true" />
@@ -491,8 +492,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/slam_map.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        <state relative-caret-position="118">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
         </state>
       </provider>
     </entry>

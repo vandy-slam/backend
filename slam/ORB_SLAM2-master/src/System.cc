@@ -61,10 +61,7 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
     //Load ORB Vocabulary
     cout << endl << "Loading ORB Vocabulary. This could take a while..." << endl;
 
-    cout << "creating" << endl;
     mpVocabulary = new ORBVocabulary();
-    cout << "new vocab created\n";
-    cout << strVocFile << " is file name!!!!!\n";
     bool bVocLoad = mpVocabulary->loadFromTextFile(strVocFile);
     if(!bVocLoad)
     {

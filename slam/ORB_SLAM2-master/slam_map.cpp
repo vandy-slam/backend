@@ -19,18 +19,18 @@ struct SLAMMap
 {
 
     SLAMMap(std::string map_name) {
-        init(map_name);
+        init(map_name, this->SLAM);
     }
     SLAMMap() {
         SLAMMap(TEST);
     }
 
     ~SLAMMap() {
-        delete SLAM;
+        delete this->SLAM;
     }
 
     void check() {
-        if (SLAM == nullptr) {
+        if (this->SLAM == nullptr) {
             cout << "is null\n";
         } else {
             cout << "is NOT null \n";
@@ -39,18 +39,16 @@ struct SLAMMap
 
     vector<int> get_points() {
         vector<int> pts;
-        for (auto pt : SLAM->GetTrackedMapPoints()) {
+        for (auto pt : this->SLAM->GetTrackedMapPoints()) {
             cout << "pt: " << pt->GetWorldPos() << endl;
         }
         return pts;
     }
 
-    void init(std::string map_name) {
+    void init(std::string map_name, &ORB_SLAM2::System *SLAM) {
         string arg1, arg2, arg3;
 
         get_args(map_name, arg1, arg2, arg3);
-
-        cout << arg1 << " set\n";
 
         vector<string> vstrImageFilenames;
         vector<double> vTimestamps;

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04cf11ec-61ca-41c1-a964-2916313cd599" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/slam/ORB_SLAM2-master/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/slam/ORB_SLAM2-master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slam/ORB_SLAM2-master/slam_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/slam/ORB_SLAM2-master/slam_map.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="04cf11ec-61ca-41c1-a964-2916313cd599" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="450">
+              <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <marker date="1541274892230" expanded="true" signature="390:450" ph="..." />
@@ -292,8 +289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state relative-caret-position="450">
+          <caret line="30" column="12" lean-forward="true" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <marker date="1541274892230" expanded="true" signature="390:450" ph="..." />

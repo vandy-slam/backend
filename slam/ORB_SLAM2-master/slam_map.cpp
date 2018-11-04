@@ -23,7 +23,7 @@ struct SLAMMap
     }
 
     vector<double> localize_with_image(std::string img_path) {
-        cv::Mat im = cv::imread(img_path), CV_LOAD_IMAGE_UNCHANGED);
+        cv::Mat im = cv::imread(img_path, CV_LOAD_IMAGE_UNCHANGED);
         vector<double> localization;
 
 

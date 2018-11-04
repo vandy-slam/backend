@@ -18,9 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="241af568-9e18-4da2-a16b-05db45c89ce0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../cpp_slam_wrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../cpp_slam_wrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../download.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slam_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/slam_map.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LocalMapping.cc" beforeDir="false" afterPath="$PROJECT_DIR$/src/LocalMapping.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -84,7 +81,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/slam_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -173,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LocalMapping.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="317" column="22" selection-start-line="317" selection-start-column="22" selection-end-line="317" selection-end-column="22" />
+            <state relative-caret-position="614">
+              <caret line="433" column="32" selection-start-line="433" selection-start-column="32" selection-end-line="433" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -218,8 +215,8 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/src/System.cc" />
         <option value="$PROJECT_DIR$/include/MapPoint.h" />
-        <option value="$PROJECT_DIR$/src/LocalMapping.cc" />
         <option value="$PROJECT_DIR$/slam_map.cpp" />
+        <option value="$PROJECT_DIR$/src/LocalMapping.cc" />
       </list>
     </option>
   </component>
@@ -353,12 +350,12 @@
       <updated>1541275079126</updated>
       <workItem from="1541275080495" duration="15000" />
       <workItem from="1541275102817" duration="4453000" />
-      <workItem from="1541311402374" duration="10405000" />
+      <workItem from="1541311402374" duration="10447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14873000" />
+    <option name="totallyTimeSpent" value="14915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -556,13 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LocalMapping.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="317" column="22" selection-start-line="317" selection-start-column="22" selection-end-line="317" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/slam_map.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -572,6 +562,13 @@
             <element signature="e#1519#1601#0" expanded="true" />
             <element signature="e#1835#1917#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LocalMapping.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="433" column="32" selection-start-line="433" selection-start-column="32" selection-end-line="433" selection-end-column="32" />
         </state>
       </provider>
     </entry>

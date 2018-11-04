@@ -28,10 +28,8 @@ struct SLAMMap
         vector<double> localization;
 
 
-
         return localization;
     }
-
 
 
     SLAMMap(string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false)) {
@@ -122,8 +120,8 @@ struct SLAMMap
         }
     }
 
-    vector<double> get_points() {
-        vector<double> pts;
+    vector<vector<double>> get_points() {
+        vector<vector<double>> pts;
         vector<ORB_SLAM2::MapPoint*> map_pts = SLAM->GetTrackedMapPoints();
         for (auto const &map_pt : map_pts) {
             vector<double> pt;

@@ -105,12 +105,13 @@ struct SLAMMap
             cout << "is null\n";
         } else {
             cout << "is NOT null \n";
+            cout << SLAM->GetTrackedMapPoints().size() << " is the size lol\n";
         }
     }
 
     vector<int> get_points() {
         vector<int> pts;
-        for (auto pt : this->SLAM->GetTrackedMapPoints()) {
+        for (auto pt : SLAM->GetTrackedMapPoints()) {
             cout << "pt: " << pt->GetWorldPos() << endl;
         }
         return pts;

@@ -34,6 +34,7 @@ struct SLAMMap
         for (auto pt : SLAM->GetTrackedMapPoints()) {
             cout << "pt: " << pt->GetWorldPos() << endl;
         }
+        return pts;
     }
 
     void init(std::string map_name) {

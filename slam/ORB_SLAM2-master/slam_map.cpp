@@ -57,7 +57,7 @@ struct SLAMMap
             im = cv::imread(arg3+"/"+vstrImageFilenames[ni],CV_LOAD_IMAGE_UNCHANGED);
             double tframe = vTimestamps[ni];
 
-            cout << "tframe is: " << trframe << endl;
+            cout << "tframe is: " << tframe << endl;
 
             if(im.empty())
             {

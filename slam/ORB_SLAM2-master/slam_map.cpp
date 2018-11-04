@@ -19,7 +19,7 @@ struct SLAMMap
 {
 
 
-    SLAMMap(string map_name, string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false))
+    SLAMMap(string arg1, string arg2, string arg3): SLAM(new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false))
     {
 
         vector<string> vstrImageFilenames;
@@ -87,9 +87,10 @@ struct SLAMMap
 
     SLAMMap() {
         string arg1, arg2, arg3;
-        get_args(TEST, arg1, arg2, arg3);
+        string name = TEST;
+        get_args(name, arg1, arg2, arg3);
 
-        SLAMMap(TEST, arg1, arg2, arg3);
+        SLAMMap(arg1, arg2, arg3);
     }
 
     void check() {
@@ -158,7 +159,7 @@ using namespace boost::python;
 
 BOOST_PYTHON_MODULE(slam_map)
         {
-                class_<SLAMMap>("slam_map", init<string, string, string, string>())
+                class_<SLAMMap>("slam_map", init<string, string, string>())
                         .def(init<>())
                         .def("test", &SLAMMap::test)
                         .def("get_pts", &SLAMMap::get_points)

@@ -44,12 +44,12 @@ struct SLAMMap
 
         cout << arg1 << " set\n";
 
-        SLAM = new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
-
         vector<string> vstrImageFilenames;
         vector<double> vTimestamps;
         string strFile = arg3+"/rgb.txt";
         LoadImages(strFile, vstrImageFilenames, vTimestamps);
+
+        SLAM = new ORB_SLAM2::System(arg1, arg2, ORB_SLAM2::System::MONOCULAR, false);
 
         int nImages = vstrImageFilenames.size();
 
@@ -111,8 +111,8 @@ struct SLAMMap
 
     void get_args(string &map_name, string &arg1, string &arg2, string &arg3) {
         if (map_name == TEST) {
-            arg1 = "./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt";
-            arg2 = "./Examples/Monocular/TUM1.yaml";
+            arg1 = "Vocabulary/ORBvoc.txt";
+            arg2 = "Examples/Monocular/TUM1.yaml";
             arg3 = "./rgbd_dataset_freiburg1_xyz";
         } else {
 

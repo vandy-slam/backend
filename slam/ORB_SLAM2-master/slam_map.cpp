@@ -33,6 +33,7 @@ struct SLAMMap
     }
 
     double get_time_stamp(string img_path) {
+        // TODO: complete me! (Extract relative timestamp from path)
         return 0.0;
     }
 
@@ -129,11 +130,7 @@ struct SLAMMap
         vector<ORB_SLAM2::MapPoint*> map_pts = SLAM->GetTrackedMapPoints();
         for (auto const &map_pt : map_pts) {
             vector<double> pt;
-            for (int coord = 0; coord < 3; coord++) {
-                double coordinate = map_pt->GetWorldPos().at<double>(coord);
-                cout << coordinate << endl;
-                pt.push_back(coordinate);
-            }
+            cout << map_pt->GetWorldPos();
             pts.push_back(pt);
         }
         return pts;

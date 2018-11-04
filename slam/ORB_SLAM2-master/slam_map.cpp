@@ -85,6 +85,7 @@ public:
         }
         cout << "done initing\n";
     }
+
     SLAMMap() {
         string arg1, arg2, arg3;
         get_args(map_name, arg1, arg2, arg3);
@@ -157,7 +158,7 @@ using namespace boost::python;
 
 BOOST_PYTHON_MODULE(slam_map)
         {
-                class_<SLAMMap>("slam_map", init<string>())
+                class_<SLAMMap>("slam_map", init<string, string, string, string>())
                         .def(init<>())
                         .def("test", &SLAMMap::test)
                         .def("get_pts", &SLAMMap::get_points)

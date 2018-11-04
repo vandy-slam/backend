@@ -18,6 +18,8 @@ using namespace std;
 class SLAMMap
 {
 
+public:
+
     SLAMMap(string map_name) {
         string arg1, arg2, arg3;
 
